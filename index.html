@@ -193,6 +193,29 @@
       font-weight: 700;
     }
 
+    .prep-table {
+      font-size: 13px;
+    }
+
+    .prep-table th:first-child,
+    .prep-table td:first-child {
+      width: 150px;
+    }
+
+    .intro-script {
+      margin: 0;
+      color: #1f2937;
+    }
+
+    .prep-list {
+      margin: 0;
+      padding-left: 18px;
+    }
+
+    .prep-list li {
+      margin: 3px 0;
+    }
+
     .rank {
       width: 78px;
       color: var(--accent);
@@ -748,6 +771,137 @@
           </dl>
         </article>
       </div>
+    </section>
+
+    <section>
+      <h2>面向导师的自我介绍与准备清单</h2>
+      <p class="note">使用方式：下面的话术不是让你逐字照读，而是把本科背景、目标方向和导师研究连接起来。正式邮件建议控制在 120-180 字，面试自我介绍控制在 45-60 秒，并用自己的项目经历替换其中的占位描述。</p>
+      <table class="prep-table">
+        <thead>
+          <tr>
+            <th>导师方向</th>
+            <th>自我介绍话术</th>
+            <th>需要努力的方向</th>
+            <th>资料与能力准备</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>杨健</strong><br>清华 / 雷达遥感</td>
+            <td><p class="intro-script">老师您好，我来自西安电子科技大学电子信息大类，专业方向涉及信息力学与遥测遥感。我对极化 SAR、雷达遥感信息处理和目标解译很感兴趣，希望把本科阶段的信号处理、遥感数据处理和编程基础用于 SAR 图像理解与应用研究。</p></td>
+            <td><ul class="prep-list"><li>补强 SAR 成像、极化 SAR、雷达方程和目标散射机理。</li><li>完成一个 SAR 目标检测、分类或变化检测复现实验。</li></ul></td>
+            <td><ul class="prep-list"><li>准备 SAR 项目报告、代码仓库、可视化结果和误差分析。</li><li>熟悉 PolSAR、Sentinel-1、Gaofen 或公开 SAR 数据集。</li></ul></td>
+          </tr>
+          <tr>
+            <td><strong>陆建华</strong><br>清华 / 空间网络通信</td>
+            <td><p class="intro-script">老师您好，我的本科背景是电子信息与遥测遥感交叉方向，既学习过信号处理、通信基础，也接触过空天信息获取与处理。我希望进一步研究空间网络、卫星通信和空天地一体化信息系统，把遥感应用需求和通信网络能力结合起来。</p></td>
+            <td><ul class="prep-list"><li>补强通信原理、信息论、无线网络、卫星链路预算。</li><li>理解空间网络路由、星间链路和空天地一体网络架构。</li></ul></td>
+            <td><ul class="prep-list"><li>准备一个卫星/无人机通信链路仿真或空天地网络综述。</li><li>能解释本科遥感背景如何转化为空间信息网络优势。</li></ul></td>
+          </tr>
+          <tr>
+            <td><strong>牛志升</strong><br>清华 / 无线网络</td>
+            <td><p class="intro-script">老师您好，我来自西电电子信息大类，本科阶段对信号处理、通信网络和数据建模有持续兴趣。未来希望围绕智能无线网络、资源分配和绿色通信开展研究，也希望把遥感/空天场景中的数据传输需求作为通信网络优化的应用入口。</p></td>
+            <td><ul class="prep-list"><li>补强凸优化、随机过程、排队论、无线资源分配。</li><li>学习强化学习或深度学习在网络调度中的应用。</li></ul></td>
+            <td><ul class="prep-list"><li>准备一个无线资源分配、边缘缓存或低功耗网络仿真。</li><li>能用 MATLAB/Python 复现一篇通信网络论文结果。</li></ul></td>
+          </tr>
+          <tr>
+            <td><strong>张良培</strong><br>武大 / 遥感智能处理</td>
+            <td><p class="intro-script">老师您好，我本科来自西电电子信息大类，方向与遥测遥感相关。我对遥感影像智能分析、模式识别和多源数据处理很感兴趣，希望把电子信息背景中的信号处理、机器学习和编程能力用于高分辨率遥感影像解译研究。</p></td>
+            <td><ul class="prep-list"><li>补强遥感图像分类、目标检测、变化检测和深度学习。</li><li>熟悉 CNN、Transformer、多模态融合与模型评估指标。</li></ul></td>
+            <td><ul class="prep-list"><li>准备 LoveDA、WHU、ISPRS 或 DOTA 类数据集实验。</li><li>整理项目海报：数据、方法、指标、消融、失败案例。</li></ul></td>
+          </tr>
+          <tr>
+            <td><strong>钟燕飞</strong><br>武大 / 高光谱遥感</td>
+            <td><p class="intro-script">老师您好，我的本科方向包含遥测遥感和电子信息基础，对高光谱遥感、多源遥感数据融合和地物智能解译非常感兴趣。我希望在研究生阶段继续强化遥感影像处理和深度学习能力，服务于城市、农业或应急遥感应用。</p></td>
+            <td><ul class="prep-list"><li>补强高光谱数据预处理、降维、分类和域适应。</li><li>学习多源融合、语义分割和遥感基础地学知识。</li></ul></td>
+            <td><ul class="prep-list"><li>准备 Indian Pines、Pavia、WHU-Hi 或 LoveDA 实验。</li><li>能说明高光谱与普通 RGB/多光谱数据的差异。</li></ul></td>
+          </tr>
+          <tr>
+            <td><strong>张永军</strong><br>武大 / 摄影测量</td>
+            <td><p class="intro-script">老师您好，我本科阶段学习电子信息与遥测遥感相关课程，对航空航天影像几何处理、摄影测量和实景三维建模很感兴趣。希望将信号处理、图像处理和工程实现能力用于低空无人机遥感、三维重建和多源数据融合研究。</p></td>
+            <td><ul class="prep-list"><li>补强摄影测量、相机模型、三维重建和几何校正。</li><li>学习 SfM、MVS、点云处理和无人机遥感流程。</li></ul></td>
+            <td><ul class="prep-list"><li>准备一个无人机影像建模或遥感影像配准项目。</li><li>熟悉 OpenCV、COLMAP、CloudCompare 或 GIS 软件。</li></ul></td>
+          </tr>
+          <tr>
+            <td><strong>陶梅霞</strong><br>上交 / 6G与边缘智能</td>
+            <td><p class="intro-script">老师您好，我来自西电电子信息大类，具备通信、信号处理和遥测遥感交叉背景。我对 6G、边缘智能、语义通信和通感算一体化很感兴趣，希望把空天/低空场景中的感知数据与无线通信、智能计算结合起来开展研究。</p></td>
+            <td><ul class="prep-list"><li>补强无线通信、边缘计算、深度学习和优化理论。</li><li>关注语义通信、联邦学习、通感算一体化最新论文。</li></ul></td>
+            <td><ul class="prep-list"><li>准备一个边缘智能或语义通信小型复现实验。</li><li>能讲清楚遥感数据传输与边缘推理的应用场景。</li></ul></td>
+          </tr>
+          <tr>
+            <td><strong>武庆庆</strong><br>上交 / 智能超表面</td>
+            <td><p class="intro-script">老师您好，我本科是电子信息大类遥测遥感相关方向，对 6G、智能超表面、无人机低空网络和通信感知一体化很感兴趣。希望在研究生阶段从无线传播建模、波束优化和 AI 赋能通信入手，探索低空/卫星网络场景。</p></td>
+            <td><ul class="prep-list"><li>补强电磁场、无线信道、MIMO、波束赋形和优化。</li><li>学习 RIS/IRS、UAV 网络和 ISAC 论文的基本模型。</li></ul></td>
+            <td><ul class="prep-list"><li>准备一个 RIS 辅助通信、无人机通信或通感一体仿真。</li><li>能用 Python/MATLAB 说明系统模型和优化目标。</li></ul></td>
+          </tr>
+          <tr>
+            <td><strong>张文军</strong><br>上交 / 图像通信</td>
+            <td><p class="intro-script">老师您好，我来自西电电子信息大类，学习过信号处理、通信和遥感图像相关内容。我对图像/视频编码、宽带无线传输和媒体网络融合很感兴趣，希望把遥感图像处理背景延伸到高效视觉信息传输与智能编码方向。</p></td>
+            <td><ul class="prep-list"><li>补强图像压缩、视频编码、信息论和多媒体通信。</li><li>理解 H.264/HEVC/VVC、神经图像压缩和传输鲁棒性。</li></ul></td>
+            <td><ul class="prep-list"><li>准备一个图像压缩、超分或无线图像传输演示。</li><li>能解释遥感影像大数据对编码与传输的挑战。</li></ul></td>
+          </tr>
+          <tr>
+            <td><strong>郁文贤</strong><br>上交 / 导航感知</td>
+            <td><p class="intro-script">老师您好，我本科方向涉及电子信息和遥测遥感，对信号与信息处理、信息融合、目标识别和导航感知非常感兴趣。我希望在研究生阶段围绕雷达/遥感信息处理、北斗导航和多源感知融合开展更系统的研究。</p></td>
+            <td><ul class="prep-list"><li>补强估计理论、信息融合、卡尔曼滤波和目标识别。</li><li>学习 GNSS/北斗、雷达信号处理和多传感器融合。</li></ul></td>
+            <td><ul class="prep-list"><li>准备一个定位融合、目标跟踪或遥感目标识别项目。</li><li>能展示从传感器数据到决策结果的完整流程。</li></ul></td>
+          </tr>
+          <tr>
+            <td><strong>杨建宇</strong><br>电子科大 / SAR成像</td>
+            <td><p class="intro-script">老师您好，我来自西电电子信息大类，专业方向与遥测遥感相关。因为本科阶段接触了信号处理、遥感数据和电子信息基础，我对 SAR 成像、雷达探测和目标检测识别方向很感兴趣，希望在雷达成像团队继续深入学习。</p></td>
+            <td><ul class="prep-list"><li>补强 SAR 成像算法、检测估计、毫米波成像和目标识别。</li><li>把“遥感应用”表述为“雷达探测与成像”的工程问题。</li></ul></td>
+            <td><ul class="prep-list"><li>准备 SAR 成像仿真、CFAR 检测或目标识别项目。</li><li>梳理信号与系统、数字信号处理、电磁场课程成绩。</li></ul></td>
+          </tr>
+          <tr>
+            <td><strong>杨平</strong><br>电子科大 / 无线通信</td>
+            <td><p class="intro-script">老师您好，我本科属于电子信息大类，具备通信、信号处理和遥测遥感交叉基础。未来希望从无线通信、抗干扰通信和 6G 多域传输方向继续深造，把空天/遥感场景中的复杂链路需求转化为通信系统研究问题。</p></td>
+            <td><ul class="prep-list"><li>补强通信原理、编码调制、抗干扰通信和安全通信。</li><li>学习 6G、卫星互联网、多域传输和智能信号处理。</li></ul></td>
+            <td><ul class="prep-list"><li>准备 OFDM、扩频抗干扰或无线链路仿真项目。</li><li>能说明从遥测遥感转通信的课程基础和动机。</li></ul></td>
+          </tr>
+          <tr>
+            <td><strong>曾涛</strong><br>北理工 / 雷达系统</td>
+            <td><p class="intro-script">老师您好，我来自西电电子信息大类遥测遥感相关方向，对雷达系统、SAR 成像和分布式雷达很感兴趣。希望将本科阶段的信号处理、遥感信息处理和工程实践能力，进一步用于雷达系统建模、成像算法和目标探测研究。</p></td>
+            <td><ul class="prep-list"><li>补强雷达系统、阵列信号处理、分布式雷达和 SAR。</li><li>训练从系统指标、信号模型到算法实现的完整表达。</li></ul></td>
+            <td><ul class="prep-list"><li>准备一页雷达/SAR 项目技术路线图。</li><li>能解释 SNR、分辨率、孔径、检测概率等关键指标。</li></ul></td>
+          </tr>
+          <tr>
+            <td><strong>师皓</strong><br>北理工 / SAR智能解译</td>
+            <td><p class="intro-script">老师您好，我本科是电子信息大类遥测遥感方向，对 SAR 图像智能解译、深度学习和多模态融合非常感兴趣。相比只做传统遥感应用，我更希望把信号处理背景和 AI 方法结合起来，研究高分辨率 SAR 目标识别与星上实时处理。</p></td>
+            <td><ul class="prep-list"><li>补强 SAR 图像特性、目标检测、语义分割和模型轻量化。</li><li>学习多模态融合、Transformer 和边缘部署基础。</li></ul></td>
+            <td><ul class="prep-list"><li>准备 SAR-Ship、MSTAR 或 HRSID 类数据集实验。</li><li>输出实验对比表、混淆矩阵、PR 曲线和失败样例分析。</li></ul></td>
+          </tr>
+          <tr>
+            <td><strong>李涵</strong><br>北理工 / 空天SAR</td>
+            <td><p class="intro-script">老师您好，我来自西安电子科技大学电子信息大类，专业方向涉及遥测遥感。我对空天合成孔径雷达、多平台 SAR 成像和动目标处理很感兴趣，希望用本科阶段的信号处理和编程基础，进一步研究新体制星载 SAR 信号处理。</p></td>
+            <td><ul class="prep-list"><li>补强星载 SAR、动目标处理、多平台成像和信号建模。</li><li>学习 IEEE TGRS/JSTARS 论文的公式推导和实验复现。</li></ul></td>
+            <td><ul class="prep-list"><li>准备 SAR 成像或 GMTI 小项目，突出推导和代码能力。</li><li>整理英文论文阅读笔记，展示科研训练潜力。</li></ul></td>
+          </tr>
+          <tr>
+            <td><strong>付进</strong><br>北航 / 海空天感知</td>
+            <td><p class="intro-script">老师您好，我本科背景是电子信息与遥测遥感交叉方向，对海空天一体化智能信息处理、多模态融合探测和跨介质定位导航很感兴趣。希望把遥感感知、信号处理和通信网络结合起来，服务于复杂环境下的智能感知系统。</p></td>
+            <td><ul class="prep-list"><li>补强多传感器融合、定位导航、智能感知和网络安全基础。</li><li>理解声/光/电多模态数据差异和跨域协同感知问题。</li></ul></td>
+            <td><ul class="prep-list"><li>准备一个多源感知融合或无人系统信息处理项目。</li><li>能说明海空天一体化场景下自己的电子信息优势。</li></ul></td>
+          </tr>
+          <tr>
+            <td><strong>张军</strong><br>北航 / 空管导航</td>
+            <td><p class="intro-script">老师您好，我来自西电电子信息大类，专业方向与遥测遥感相关。未来希望关注空天地一体化、航空通信导航监视和星基运行监测等方向，把通信、导航、遥感和信息处理结合到实际空管系统问题中。</p></td>
+            <td><ul class="prep-list"><li>补强航空通信导航监视、GNSS、ADS-B 和系统工程思维。</li><li>学习空管运行、安全监视和星基监视应用场景。</li></ul></td>
+            <td><ul class="prep-list"><li>准备空天地一体化信息系统综述或导航监视案例分析。</li><li>预联系时同步关注团队青年导师和实验室招生信息。</li></ul></td>
+          </tr>
+          <tr>
+            <td><strong>蔡云龙</strong><br>浙大 / 通感一体</td>
+            <td><p class="intro-script">老师您好，我本科属于电子信息大类，方向涉及遥测遥感与信号处理。我对无线通信、AI 赋能通信和通信感知一体化很感兴趣，希望把遥感/空天感知背景转化为通感一体系统中的感知任务建模和通信信号处理能力。</p></td>
+            <td><ul class="prep-list"><li>补强无线通信、优化算法、随机过程和机器学习。</li><li>重点学习 ISAC 系统模型、波形设计和资源优化。</li></ul></td>
+            <td><ul class="prep-list"><li>准备一个 OFDM 通感一体仿真或联合波束设计复现。</li><li>能解释“通信学生”和“遥感学生”各自优势如何结合。</li></ul></td>
+          </tr>
+          <tr>
+            <td><strong>黄敬峰</strong><br>浙大 / 高光谱遥感</td>
+            <td><p class="intro-script">老师您好，我本科方向与遥测遥感和电子信息相关，对高光谱遥感、灾害遥感和植被/农业遥感应用很感兴趣。希望把数据处理、机器学习和遥感反演能力结合起来，面向环境资源和农业监测问题开展研究。</p></td>
+            <td><ul class="prep-list"><li>补强高光谱遥感、植被指数、反演模型和地学应用知识。</li><li>学习遥感机理模型与机器学习模型的结合方式。</li></ul></td>
+            <td><ul class="prep-list"><li>准备农业/植被/灾害遥感案例，最好含公开数据和代码。</li><li>能说明自己愿意补足环境资源遥感的学科背景。</li></ul></td>
+          </tr>
+        </tbody>
+      </table>
     </section>
 
     <section>
