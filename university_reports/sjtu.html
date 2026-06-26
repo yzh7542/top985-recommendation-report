@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>上海交通大学推免专业与导师推荐报告</title>
+  <style>
+    :root {
+      --ink: #17212b;
+      --muted: #5b6673;
+      --line: #dbe3ea;
+      --panel: #f7f9fb;
+      --accent: #126b68;
+      --accent-2: #8f4f21;
+      --accent-3: #284f8f;
+      --soft: #eef8f6;
+      --bg: #fff;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--bg);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans SC", "Microsoft YaHei", Arial, sans-serif;
+      line-height: 1.65;
+    }
+    a { color: var(--accent-3); text-decoration: none; border-bottom: 1px solid rgba(40, 79, 143, .28); }
+    a:hover { border-bottom-color: var(--accent-3); }
+    .page { max-width: 1120px; margin: 0 auto; padding: 36px 24px 56px; }
+    .hero { border-bottom: 3px solid var(--accent); padding-bottom: 24px; margin-bottom: 28px; }
+    .kicker { margin: 0 0 8px; color: var(--accent); font-size: 14px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+    h1 { margin: 0; font-size: 34px; line-height: 1.2; letter-spacing: 0; }
+    h2 { margin: 0 0 14px; font-size: 24px; line-height: 1.25; letter-spacing: 0; }
+    h3 { margin: 0 0 8px; font-size: 18px; line-height: 1.35; letter-spacing: 0; }
+    p { margin: 8px 0; }
+    section { margin-top: 34px; }
+    .subtitle { max-width: 900px; margin: 14px 0 0; color: var(--muted); font-size: 16px; }
+    .meta, .nav { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+    .tag, .nav a {
+      display: inline-flex; align-items: center; min-height: 30px; padding: 3px 10px;
+      border: 1px solid var(--line); border-radius: 6px; background: var(--panel);
+      color: #334155; font-size: 13px; font-weight: 700;
+    }
+    .nav a { border-bottom: 1px solid var(--line); }
+    .callout { background: var(--soft); border: 1px solid rgba(18, 107, 104, .25); border-radius: 8px; padding: 18px; }
+    .note { padding: 14px 16px; border-left: 4px solid var(--accent-2); background: #fff8f0; color: #423224; border-radius: 0 6px 6px 0; }
+    .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+    .card { border: 1px solid var(--line); border-radius: 8px; background: #fff; padding: 16px; }
+    .card.primary { border-color: rgba(18, 107, 104, .4); box-shadow: inset 4px 0 0 var(--accent); }
+    .card.secondary { box-shadow: inset 4px 0 0 var(--accent-3); }
+    .card.tertiary { box-shadow: inset 4px 0 0 var(--accent-2); }
+    table { width: 100%; border-collapse: collapse; margin-top: 12px; font-size: 14px; }
+    th, td { border: 1px solid var(--line); padding: 10px 12px; vertical-align: top; text-align: left; }
+    th { background: #eef4f7; font-weight: 800; }
+    .rank { width: 84px; color: var(--accent); font-weight: 800; white-space: nowrap; }
+    .teacher-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+    .teacher { display: flex; flex-direction: column; gap: 10px; min-height: 100%; }
+    .teacher header { display: flex; justify-content: space-between; gap: 10px; align-items: baseline; border: 0; padding: 0; margin: 0; }
+    .teacher .name { font-size: 19px; font-weight: 800; }
+    .label { display: inline-block; padding: 2px 8px; border-radius: 5px; background: #e8f3f1; color: var(--accent); font-size: 12px; font-weight: 800; white-space: nowrap; }
+    .teacher dl { margin: 0; display: grid; gap: 7px; }
+    .teacher dt { font-weight: 800; color: #263746; }
+    .teacher dd { margin: 0; color: var(--muted); }
+    .compact-list, .prep-list { margin: 8px 0 0; padding-left: 20px; }
+    .compact-list li, .prep-list li { margin: 5px 0; }
+    .sources { columns: 2; padding-left: 20px; }
+    .small { color: var(--muted); font-size: 13px; }
+    .intro-script { margin: 0; color: #233344; }
+    .index-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+    .index-list .card h2 { font-size: 20px; margin-bottom: 8px; }
+    @media (max-width: 820px) {
+      .page { padding: 24px 16px 40px; }
+      h1 { font-size: 28px; }
+      .grid, .teacher-grid, .index-list { grid-template-columns: 1fr; }
+      table { display: block; overflow-x: auto; white-space: normal; }
+      .sources { columns: 1; }
+    }
+    @media print {
+      .page { max-width: none; padding: 20mm 16mm; }
+      a { color: inherit; border-bottom: 0; }
+      .card, .callout, .note { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="hero">
+      <p class="kicker">University Recommendation Report</p>
+      <h1>上海交通大学推免专业与导师推荐报告</h1>
+      <p class="subtitle">面向西安电子科技大学大三学生，本科方向为电子信息大类、信息力学与遥测遥感。报告按“学校维度”拆分，保持东南大学报告的结构：专业选择、导师介绍、成果、匹配理由、自我介绍话术和准备清单。</p>
+      <div class="meta">
+        <span class="tag">资料时点：2026-06-26</span>
+        <span class="tag">定位：综合排名冲刺</span>
+        <span class="tag">核心方向：通信 / 雷达 SAR / 遥感智能处理</span>
+        <span class="tag">来源：高校官网、学院/导师主页、官方新闻</span>
+      </div>
+      <nav class="nav">
+        <a href="index.html">返回总入口</a>
+      </nav>
+    </header>
+
+    <section>
+      <h2>一页结论</h2>
+      <div class="callout">
+        <p><strong>学校定位：</strong>上交适合通信、6G、通感一体、低空网络、图像通信和导航感知方向。对你来说，它比纯遥感更适合走“电子信息 + 空天/低空应用”的叙事。</p>
+        <p><strong>申请建议：</strong>优先申请集成电路学院/信息与电子工程学院的信息与通信工程、电子信息，以及自动化与感知学院的导航感知交叉方向。</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>适合专业推荐</h2>
+      <table>
+        <thead>
+          <tr><th class="rank">优先级</th><th>学院与专业/方向</th><th>匹配理由</th><th>建议导师池</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="rank">S 级</td><td>信息与通信工程 / 电子信息</td><td>面向 6G、语义通信、边缘智能、智能超表面、通感算一体化。</td><td>陶梅霞、武庆庆</td></tr>
+          <tr><td class="rank">A 级</td><td>导航感知 / 信息融合 / 目标识别</td><td>把遥测遥感、雷达信息处理和导航定位联系起来，适合跨院系预联系。</td><td>郁文贤</td></tr>
+          <tr><td class="rank">A- 级</td><td>图像通信与媒体网络</td><td>适合有图像处理、编码压缩、遥感影像传输兴趣的申请人。</td><td>张文军</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>主推导师介绍</h2>
+      <div class="teacher-grid">
+
+        <article class="card teacher primary">
+          <header><span class="name">陶梅霞</span><span class="label">6G / 边缘智能</span></header>
+          <dl>
+            <dt>单位与身份</dt><dd>上海交通大学集成电路学院（信息与电子工程学院）教授，无线通信技术研究所。</dd>
+            <dt>研究领域</dt><dd>边缘智能、语义通信、通感算一体化、智能信道建模与波束管理。</dd>
+            <dt>代表成果</dt><dd>学院主页列出其主持国家自然科学基金重点项目、青年科学基金 A 类项目和上海市 6G 专项等；代表论文覆盖 6G 联邦边缘学习、语义通信、通感一体波束设计。</dd>
+            <dt>适配理由</dt><dd>适合从遥测遥感转向 6G、低空通信、通感算一体化和无线 AI。</dd>
+            <dt>来源</dt><dd><a href="https://icisee.sjtu.edu.cn/jiaoshiml/taomeixia.html">上海交通大学陶梅霞教师主页</a></dd>
+          </dl>
+        </article>
+
+        <article class="card teacher secondary">
+          <header><span class="name">武庆庆</span><span class="label">智能超表面 / 低空网络</span></header>
+          <dl>
+            <dt>单位与身份</dt><dd>上海交通大学集成电路学院（信息与电子工程学院）副教授，电磁与智能系统研究所。</dd>
+            <dt>研究领域</dt><dd>6G 智能反射面/智能超表面、卫星互联网、无人机低空网络、通信感知一体化、无线 AI。</dd>
+            <dt>代表成果</dt><dd>主页显示其发表 IEEE 期刊论文 100 余篇，Google Scholar 引用 5 万余次，多项成果写入 6G 白皮书和产业技术报告，获上海市自然科学一等奖、IEEE 通信学会亚太最杰出青年学者奖等。</dd>
+            <dt>适配理由</dt><dd>适合冲 6G 前沿方向，尤其是“通信 + 感知 + 低空/卫星/无线 AI”的高成长赛道。</dd>
+            <dt>来源</dt><dd><a href="https://icisee.sjtu.edu.cn/jiaoshiml/wuqingqing.html">上海交通大学武庆庆教师主页</a></dd>
+          </dl>
+        </article>
+
+        <article class="card teacher tertiary">
+          <header><span class="name">郁文贤</span><span class="label">导航感知 / 信息融合</span></header>
+          <dl>
+            <dt>单位与身份</dt><dd>上海交通大学自动化与感知学院讲席教授，感知与导航研究所。</dd>
+            <dt>研究领域</dt><dd>信号与信息处理、信息融合、目标识别、遥感与导航。</dd>
+            <dt>代表成果</dt><dd>学院主页列出其以第一完成人获国家科技进步二等奖“高精度高可靠定位导航技术与应用”和“空间目标监测相控阵雷达信息处理与应用系统”等成果。</dd>
+            <dt>适配理由</dt><dd>适合北斗导航、目标识别、雷达信息处理、遥感与导航融合方向。</dd>
+            <dt>来源</dt><dd><a href="https://sais.sjtu.edu.cn/faculty/yuwenxian.html">上海交通大学郁文贤教师主页</a></dd>
+          </dl>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>面向导师的自我介绍与准备清单</h2>
+      <p class="note">下面的话术不是逐字照读稿，而是帮助你把本科背景、目标方向和导师研究连接起来。正式邮件建议控制在 120-180 字；面试自我介绍控制在 45-60 秒，并用你的真实项目替换其中的通用表达。</p>
+      <table>
+        <thead>
+          <tr><th>导师方向</th><th>自我介绍话术</th><th>需要努力的方向</th><th>资料与能力准备</th></tr>
+        </thead>
+        <tbody>
+
+          <tr>
+            <td><strong>陶梅霞</strong><br>6G / 边缘智能</td>
+            <td><p class="intro-script">老师您好，我来自西电电子信息大类，具备通信、信号处理和遥测遥感交叉背景。我对 6G、边缘智能、语义通信和通感算一体化很感兴趣，希望把空天/低空场景中的感知数据与无线通信、智能计算结合起来开展研究。</p></td>
+            <td><ul class="prep-list"><li>补强无线通信、边缘计算、深度学习和优化理论。</li><li>关注语义通信、联邦学习、通感算一体化最新论文。</li></ul></td>
+            <td><ul class="prep-list"><li>准备一个边缘智能或语义通信小型复现实验。</li><li>能讲清楚遥感数据传输与边缘推理的应用场景。</li></ul></td>
+          </tr>
+
+          <tr>
+            <td><strong>武庆庆</strong><br>智能超表面 / 低空网络</td>
+            <td><p class="intro-script">老师您好，我本科是电子信息大类遥测遥感相关方向，对 6G、智能超表面、无人机低空网络和通信感知一体化很感兴趣。希望在研究生阶段从无线传播建模、波束优化和 AI 赋能通信入手，探索低空/卫星网络场景。</p></td>
+            <td><ul class="prep-list"><li>补强电磁场、无线信道、MIMO、波束赋形和优化。</li><li>学习 RIS/IRS、UAV 网络和 ISAC 论文的基本模型。</li></ul></td>
+            <td><ul class="prep-list"><li>准备一个 RIS 辅助通信、无人机通信或通感一体仿真。</li><li>能用 Python/MATLAB 说明系统模型和优化目标。</li></ul></td>
+          </tr>
+
+          <tr>
+            <td><strong>郁文贤</strong><br>导航感知 / 信息融合</td>
+            <td><p class="intro-script">老师您好，我本科方向涉及电子信息和遥测遥感，对信号与信息处理、信息融合、目标识别和导航感知非常感兴趣。我希望在研究生阶段围绕雷达/遥感信息处理、北斗导航和多源感知融合开展更系统的研究。</p></td>
+            <td><ul class="prep-list"><li>补强估计理论、信息融合、卡尔曼滤波和目标识别。</li><li>学习 GNSS/北斗、雷达信号处理和多传感器融合。</li></ul></td>
+            <td><ul class="prep-list"><li>准备一个定位融合、目标跟踪或遥感目标识别项目。</li><li>能展示从传感器数据到决策结果的完整流程。</li></ul></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>申请策略</h2>
+      <div class="grid">
+        <div class="card primary">
+          <h3>主线叙事</h3>
+          <p>建议统一包装为“西电电子信息背景 + 遥测遥感应用场景 + 信号处理/机器学习/通信网络方法”。联系 上海交通大学 时，不要只说想保研，要明确自己想解决哪类感知、通信或遥感数据处理问题。</p>
+        </div>
+        <div class="card secondary">
+          <h3>优先准备材料</h3>
+          <ul class="compact-list">
+            <li>一页中文简历和一页英文简历。</li>
+            <li>成绩排名、绩点、核心课成绩截图或证明。</li>
+            <li>1-2 个可展示项目：代码、报告、实验图、指标和失败样例。</li>
+            <li>每位导师单独写 2-3 句匹配理由，避免群发同一封邮件。</li>
+          </ul>
+        </div>
+        <div class="card tertiary">
+          <h3>邮件标题模板</h3>
+          <p>2027届推免咨询-西安电子科技大学-姓名-上海交通大学-6G / 边缘智能</p>
+        </div>
+        <div class="card">
+          <h3>风险提醒</h3>
+          <ul class="compact-list">
+            <li>导师主页和招生状态会变化，预联系前必须复核当年夏令营、预推免和招生目录。</li>
+            <li>院士或团队负责人不一定直接招硕士，建议同步关注团队青年 PI、长聘副教授和研究员。</li>
+            <li>若你的实际专业课程与“信息力学/遥测遥感”不完全一致，应按成绩单重新微调方向。</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>资料来源</h2>
+      <ul class="sources">
+        <li><a href="https://icisee.sjtu.edu.cn/jiaoshiml/taomeixia.html">上海交通大学陶梅霞教师主页</a></li>
+        <li><a href="https://icisee.sjtu.edu.cn/jiaoshiml/wuqingqing.html">上海交通大学武庆庆教师主页</a></li>
+        <li><a href="https://sais.sjtu.edu.cn/faculty/yuwenxian.html">上海交通大学郁文贤教师主页</a></li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>南京大学推免专业与导师推荐报告</title>
+  <style>
+    :root {
+      --ink: #17212b;
+      --muted: #5b6673;
+      --line: #dbe3ea;
+      --panel: #f7f9fb;
+      --accent: #126b68;
+      --accent-2: #8f4f21;
+      --accent-3: #284f8f;
+      --soft: #eef8f6;
+      --bg: #fff;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--bg);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans SC", "Microsoft YaHei", Arial, sans-serif;
+      line-height: 1.65;
+    }
+    a { color: var(--accent-3); text-decoration: none; border-bottom: 1px solid rgba(40, 79, 143, .28); }
+    a:hover { border-bottom-color: var(--accent-3); }
+    .page { max-width: 1120px; margin: 0 auto; padding: 36px 24px 56px; }
+    .hero { border-bottom: 3px solid var(--accent); padding-bottom: 24px; margin-bottom: 28px; }
+    .kicker { margin: 0 0 8px; color: var(--accent); font-size: 14px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+    h1 { margin: 0; font-size: 34px; line-height: 1.2; letter-spacing: 0; }
+    h2 { margin: 0 0 14px; font-size: 24px; line-height: 1.25; letter-spacing: 0; }
+    h3 { margin: 0 0 8px; font-size: 18px; line-height: 1.35; letter-spacing: 0; }
+    p { margin: 8px 0; }
+    section { margin-top: 34px; }
+    .subtitle { max-width: 900px; margin: 14px 0 0; color: var(--muted); font-size: 16px; }
+    .meta, .nav { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+    .tag, .nav a {
+      display: inline-flex; align-items: center; min-height: 30px; padding: 3px 10px;
+      border: 1px solid var(--line); border-radius: 6px; background: var(--panel);
+      color: #334155; font-size: 13px; font-weight: 700;
+    }
+    .nav a { border-bottom: 1px solid var(--line); }
+    .callout { background: var(--soft); border: 1px solid rgba(18, 107, 104, .25); border-radius: 8px; padding: 18px; }
+    .note { padding: 14px 16px; border-left: 4px solid var(--accent-2); background: #fff8f0; color: #423224; border-radius: 0 6px 6px 0; }
+    .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+    .card { border: 1px solid var(--line); border-radius: 8px; background: #fff; padding: 16px; }
+    .card.primary { border-color: rgba(18, 107, 104, .4); box-shadow: inset 4px 0 0 var(--accent); }
+    .card.secondary { box-shadow: inset 4px 0 0 var(--accent-3); }
+    .card.tertiary { box-shadow: inset 4px 0 0 var(--accent-2); }
+    table { width: 100%; border-collapse: collapse; margin-top: 12px; font-size: 14px; }
+    th, td { border: 1px solid var(--line); padding: 10px 12px; vertical-align: top; text-align: left; }
+    th { background: #eef4f7; font-weight: 800; }
+    .rank { width: 84px; color: var(--accent); font-weight: 800; white-space: nowrap; }
+    .teacher-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+    .teacher { display: flex; flex-direction: column; gap: 10px; min-height: 100%; }
+    .teacher header { display: flex; justify-content: space-between; gap: 10px; align-items: baseline; border: 0; padding: 0; margin: 0; }
+    .teacher .name { font-size: 19px; font-weight: 800; }
+    .label { display: inline-block; padding: 2px 8px; border-radius: 5px; background: #e8f3f1; color: var(--accent); font-size: 12px; font-weight: 800; white-space: nowrap; }
+    .teacher dl { margin: 0; display: grid; gap: 7px; }
+    .teacher dt { font-weight: 800; color: #263746; }
+    .teacher dd { margin: 0; color: var(--muted); }
+    .compact-list, .prep-list { margin: 8px 0 0; padding-left: 20px; }
+    .compact-list li, .prep-list li { margin: 5px 0; }
+    .sources { columns: 2; padding-left: 20px; }
+    .small { color: var(--muted); font-size: 13px; }
+    .intro-script { margin: 0; color: #233344; }
+    .index-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+    .index-list .card h2 { font-size: 20px; margin-bottom: 8px; }
+    @media (max-width: 820px) {
+      .page { padding: 24px 16px 40px; }
+      h1 { font-size: 28px; }
+      .grid, .teacher-grid, .index-list { grid-template-columns: 1fr; }
+      table { display: block; overflow-x: auto; white-space: normal; }
+      .sources { columns: 1; }
+    }
+    @media print {
+      .page { max-width: none; padding: 20mm 16mm; }
+      a { color: inherit; border-bottom: 0; }
+      .card, .callout, .note { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="hero">
+      <p class="kicker">University Recommendation Report</p>
+      <h1>南京大学推免专业与导师推荐报告</h1>
+      <p class="subtitle">面向西安电子科技大学大三学生，本科方向为电子信息大类、信息力学与遥测遥感。报告按“学校维度”拆分，保持东南大学报告的结构：专业选择、导师介绍、成果、匹配理由、自我介绍话术和准备清单。</p>
+      <div class="meta">
+        <span class="tag">资料时点：2026-06-26</span>
+        <span class="tag">定位：C9冲刺 / 遥感通信双线</span>
+        <span class="tag">核心方向：通信 / 雷达 SAR / 遥感智能处理</span>
+        <span class="tag">来源：高校官网、学院/导师主页、官方新闻</span>
+      </div>
+      <nav class="nav">
+        <a href="index.html">返回总入口</a>
+      </nav>
+    </header>
+
+    <section>
+      <h2>一页结论</h2>
+      <div class="callout">
+        <p><strong>学校定位：</strong>南大适合两条线：电子学院的通信、空天地一体化网络、智能通信；地理与海洋科学学院的遥感图像处理、GIS 和多源遥感融合。</p>
+        <p><strong>申请建议：</strong>如果你想保持通信主线，优先电子科学与工程学院；如果你已有遥感项目，地理信息科学/遥感方向更容易讲匹配。</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>适合专业推荐</h2>
+      <table>
+        <thead>
+          <tr><th class="rank">优先级</th><th>学院与专业/方向</th><th>匹配理由</th><th>建议导师池</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="rank">S 级</td><td>电子科学与工程学院：信息与通信工程</td><td>通信工程系涵盖雷达信号处理、空间信息网络、无线通信与网络、智能信息处理等实验室。</td><td>周海波、杨鲲、王健</td></tr>
+          <tr><td class="rank">S 级</td><td>地理与海洋科学学院：遥感/GIS</td><td>适合遥感图像、地理信息、多源遥感融合、目标识别。</td><td>杜培军、肖鹏峰</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>主推导师介绍</h2>
+      <div class="teacher-grid">
+
+        <article class="card teacher primary">
+          <header><span class="name">周海波</span><span class="label">空天地一体化网络</span></header>
+          <dl>
+            <dt>单位与身份</dt><dd>南京大学电子科学与工程学院副院长、教授、博导，IEEE/IET Fellow。</dd>
+            <dt>研究领域</dt><dd>空天地一体化车载异构融合组网与动态资源管理。</dd>
+            <dt>代表成果</dt><dd>学院新闻显示其因对车联网与空天地一体化网络无线接入与资源管理的贡献当选 IEEE Fellow，并获得多项通信领域荣誉。</dd>
+            <dt>适配理由</dt><dd>适合“电子信息 + 空天网络 + 低空/车联网/卫星网络”的通信路线。</dd>
+            <dt>来源</dt><dd><a href="https://ese.nju.edu.cn/35/f0/c22536a800240/page.htm">南京大学周海波 IEEE Fellow 新闻</a></dd>
+          </dl>
+        </article>
+
+        <article class="card teacher secondary">
+          <header><span class="name">杨鲲</span><span class="label">无线网络 / 通信感知计算融合</span></header>
+          <dl>
+            <dt>单位与身份</dt><dd>南京大学智能软件与工程学院国家特聘教授，南京大学智慧网络与通信研究院院长。</dd>
+            <dt>研究领域</dt><dd>无线网络和移动通信、通信-感知-计算融合技术、通信网络内生智能。</dd>
+            <dt>代表成果</dt><dd>学院资料显示其发表论文 500 多篇，授权发明专利 50 多项，曾获省部级科学技术一等奖和多项 IEEE 会议最佳论文奖。</dd>
+            <dt>适配理由</dt><dd>适合通感算融合、智能网络和移动通信方向，平台和方向都足够前沿。</dd>
+            <dt>来源</dt><dd><a href="https://ise.nju.edu.cn/info/1007/2451.htm">南京大学杨鲲课题组介绍</a></dd>
+          </dl>
+        </article>
+
+        <article class="card teacher tertiary">
+          <header><span class="name">杜培军</span><span class="label">遥感地理信息</span></header>
+          <dl>
+            <dt>单位与身份</dt><dd>南京大学地理信息科学系教授、博士生导师，江苏省遥感地理信息新技术重点实验室主任。</dd>
+            <dt>研究领域</dt><dd>遥感图像处理、地理信息科学、多源遥感数据融合、遥感信息提取等。</dd>
+            <dt>代表成果</dt><dd>学院主页显示其担任多个遥感、测绘和地理信息期刊编委，并长期从事遥感地理信息新技术研究。</dd>
+            <dt>适配理由</dt><dd>适合遥感影像处理、GIS、多源数据融合和地理信息方向。</dd>
+            <dt>来源</dt><dd><a href="https://sgos.nju.edu.cn/dpj/list.htm">南京大学杜培军主页</a></dd>
+          </dl>
+        </article>
+
+        <article class="card teacher tertiary">
+          <header><span class="name">肖鹏峰</span><span class="label">遥感 / 地球观测</span></header>
+          <dl>
+            <dt>单位与身份</dt><dd>南京大学地理信息科学系教授。</dd>
+            <dt>研究领域</dt><dd>遥感、GIS、地球观测与导航相关方向。</dd>
+            <dt>代表成果</dt><dd>学院主页显示其入选全国高校 GIS 创新人物、江苏省 333 工程高层次人才，并任国家重点研发计划地球观测与导航专项总体专家组成员等。</dd>
+            <dt>适配理由</dt><dd>适合地球观测、遥感应用、GIS 与导航交叉方向。</dd>
+            <dt>来源</dt><dd><a href="https://sgos.nju.edu.cn/xpf/list.htm">南京大学肖鹏峰主页</a></dd>
+          </dl>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>面向导师的自我介绍与准备清单</h2>
+      <p class="note">下面的话术不是逐字照读稿，而是帮助你把本科背景、目标方向和导师研究连接起来。正式邮件建议控制在 120-180 字；面试自我介绍控制在 45-60 秒，并用你的真实项目替换其中的通用表达。</p>
+      <table>
+        <thead>
+          <tr><th>导师方向</th><th>自我介绍话术</th><th>需要努力的方向</th><th>资料与能力准备</th></tr>
+        </thead>
+        <tbody>
+
+          <tr>
+            <td><strong>周海波</strong><br>空天地一体化网络</td>
+            <td><p class="intro-script">老师您好，我来自西电电子信息大类，方向涉及遥测遥感和信号处理。我对空天地一体化网络、无线接入和资源管理很感兴趣，希望把空天感知场景中的数据传输需求转化为网络协同和资源优化问题。</p></td>
+            <td><ul class="prep-list"><li>补强无线网络、车联网、低轨卫星网络和资源分配。</li><li>学习空天地一体化网络中的接入控制和动态调度模型。</li></ul></td>
+            <td><ul class="prep-list"><li>准备一个低轨/无人机/车联网资源分配仿真。</li><li>能说明遥感背景如何帮助理解空天数据业务需求。</li></ul></td>
+          </tr>
+
+          <tr>
+            <td><strong>杨鲲</strong><br>无线网络 / 通信感知计算融合</td>
+            <td><p class="intro-script">老师您好，我本科属于电子信息大类，兼具通信、信号处理和遥测遥感背景。我对通信-感知-计算融合和通信网络内生智能很感兴趣，希望围绕空天/低空场景中的感知数据传输与智能计算协同开展研究。</p></td>
+            <td><ul class="prep-list"><li>补强无线通信、移动网络、边缘计算和机器学习。</li><li>理解通信、感知、计算三类资源如何联合建模。</li></ul></td>
+            <td><ul class="prep-list"><li>准备一个边缘智能或通感算融合综述/仿真。</li><li>能讲清楚系统场景、瓶颈、指标和可优化变量。</li></ul></td>
+          </tr>
+
+          <tr>
+            <td><strong>杜培军</strong><br>遥感地理信息</td>
+            <td><p class="intro-script">老师您好，我来自西电电子信息大类遥测遥感相关方向，对遥感图像处理、地理信息和多源数据融合很感兴趣。希望把本科阶段的信号处理、机器学习和遥感数据基础用于遥感信息提取和地理空间分析研究。</p></td>
+            <td><ul class="prep-list"><li>补强 GIS、遥感图像分类、变化检测和地学基础。</li><li>学习多源数据融合、特征选择和空间统计。</li></ul></td>
+            <td><ul class="prep-list"><li>准备一个遥感分类或多源融合项目，配地图可视化。</li><li>能说明电子信息背景在遥感算法实现中的优势。</li></ul></td>
+          </tr>
+
+          <tr>
+            <td><strong>肖鹏峰</strong><br>遥感 / 地球观测</td>
+            <td><p class="intro-script">老师您好，我本科方向涉及电子信息和遥测遥感，对地球观测、遥感图像处理和 GIS 应用很感兴趣。希望在研究生阶段把信号处理和编程能力用于地理空间数据分析、目标识别与环境监测应用。</p></td>
+            <td><ul class="prep-list"><li>补强遥感原理、地理空间数据处理和 GIS 软件。</li><li>学习地球观测与导航专项中的典型应用场景。</li></ul></td>
+            <td><ul class="prep-list"><li>准备一个带空间可视化的遥感应用案例。</li><li>整理 ArcGIS/QGIS、Python 地理数据处理能力证明。</li></ul></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>申请策略</h2>
+      <div class="grid">
+        <div class="card primary">
+          <h3>主线叙事</h3>
+          <p>建议统一包装为“西电电子信息背景 + 遥测遥感应用场景 + 信号处理/机器学习/通信网络方法”。联系 南京大学 时，不要只说想保研，要明确自己想解决哪类感知、通信或遥感数据处理问题。</p>
+        </div>
+        <div class="card secondary">
+          <h3>优先准备材料</h3>
+          <ul class="compact-list">
+            <li>一页中文简历和一页英文简历。</li>
+            <li>成绩排名、绩点、核心课成绩截图或证明。</li>
+            <li>1-2 个可展示项目：代码、报告、实验图、指标和失败样例。</li>
+            <li>每位导师单独写 2-3 句匹配理由，避免群发同一封邮件。</li>
+          </ul>
+        </div>
+        <div class="card tertiary">
+          <h3>邮件标题模板</h3>
+          <p>2027届推免咨询-西安电子科技大学-姓名-南京大学-空天地一体化网络</p>
+        </div>
+        <div class="card">
+          <h3>风险提醒</h3>
+          <ul class="compact-list">
+            <li>导师主页和招生状态会变化，预联系前必须复核当年夏令营、预推免和招生目录。</li>
+            <li>院士或团队负责人不一定直接招硕士，建议同步关注团队青年 PI、长聘副教授和研究员。</li>
+            <li>若你的实际专业课程与“信息力学/遥测遥感”不完全一致，应按成绩单重新微调方向。</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>资料来源</h2>
+      <ul class="sources">
+        <li><a href="https://ese.nju.edu.cn/35/f0/c22536a800240/page.htm">南京大学周海波 IEEE Fellow 新闻</a></li>
+        <li><a href="https://ise.nju.edu.cn/info/1007/2451.htm">南京大学杨鲲课题组介绍</a></li>
+        <li><a href="https://sgos.nju.edu.cn/dpj/list.htm">南京大学杜培军主页</a></li>
+        <li><a href="https://sgos.nju.edu.cn/xpf/list.htm">南京大学肖鹏峰主页</a></li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>

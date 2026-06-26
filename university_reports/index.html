@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>985/C9高校推免专业与导师分类报告</title>
+  <style>
+    :root {
+      --ink: #17212b;
+      --muted: #5b6673;
+      --line: #dbe3ea;
+      --panel: #f7f9fb;
+      --accent: #126b68;
+      --accent-2: #8f4f21;
+      --accent-3: #284f8f;
+      --soft: #eef8f6;
+      --bg: #fff;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--bg);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans SC", "Microsoft YaHei", Arial, sans-serif;
+      line-height: 1.65;
+    }
+    a { color: var(--accent-3); text-decoration: none; border-bottom: 1px solid rgba(40, 79, 143, .28); }
+    a:hover { border-bottom-color: var(--accent-3); }
+    .page { max-width: 1120px; margin: 0 auto; padding: 36px 24px 56px; }
+    .hero { border-bottom: 3px solid var(--accent); padding-bottom: 24px; margin-bottom: 28px; }
+    .kicker { margin: 0 0 8px; color: var(--accent); font-size: 14px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+    h1 { margin: 0; font-size: 34px; line-height: 1.2; letter-spacing: 0; }
+    h2 { margin: 0 0 14px; font-size: 24px; line-height: 1.25; letter-spacing: 0; }
+    h3 { margin: 0 0 8px; font-size: 18px; line-height: 1.35; letter-spacing: 0; }
+    p { margin: 8px 0; }
+    section { margin-top: 34px; }
+    .subtitle { max-width: 900px; margin: 14px 0 0; color: var(--muted); font-size: 16px; }
+    .meta, .nav { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+    .tag, .nav a {
+      display: inline-flex; align-items: center; min-height: 30px; padding: 3px 10px;
+      border: 1px solid var(--line); border-radius: 6px; background: var(--panel);
+      color: #334155; font-size: 13px; font-weight: 700;
+    }
+    .nav a { border-bottom: 1px solid var(--line); }
+    .callout { background: var(--soft); border: 1px solid rgba(18, 107, 104, .25); border-radius: 8px; padding: 18px; }
+    .note { padding: 14px 16px; border-left: 4px solid var(--accent-2); background: #fff8f0; color: #423224; border-radius: 0 6px 6px 0; }
+    .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+    .card { border: 1px solid var(--line); border-radius: 8px; background: #fff; padding: 16px; }
+    .card.primary { border-color: rgba(18, 107, 104, .4); box-shadow: inset 4px 0 0 var(--accent); }
+    .card.secondary { box-shadow: inset 4px 0 0 var(--accent-3); }
+    .card.tertiary { box-shadow: inset 4px 0 0 var(--accent-2); }
+    table { width: 100%; border-collapse: collapse; margin-top: 12px; font-size: 14px; }
+    th, td { border: 1px solid var(--line); padding: 10px 12px; vertical-align: top; text-align: left; }
+    th { background: #eef4f7; font-weight: 800; }
+    .rank { width: 84px; color: var(--accent); font-weight: 800; white-space: nowrap; }
+    .teacher-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+    .teacher { display: flex; flex-direction: column; gap: 10px; min-height: 100%; }
+    .teacher header { display: flex; justify-content: space-between; gap: 10px; align-items: baseline; border: 0; padding: 0; margin: 0; }
+    .teacher .name { font-size: 19px; font-weight: 800; }
+    .label { display: inline-block; padding: 2px 8px; border-radius: 5px; background: #e8f3f1; color: var(--accent); font-size: 12px; font-weight: 800; white-space: nowrap; }
+    .teacher dl { margin: 0; display: grid; gap: 7px; }
+    .teacher dt { font-weight: 800; color: #263746; }
+    .teacher dd { margin: 0; color: var(--muted); }
+    .compact-list, .prep-list { margin: 8px 0 0; padding-left: 20px; }
+    .compact-list li, .prep-list li { margin: 5px 0; }
+    .sources { columns: 2; padding-left: 20px; }
+    .small { color: var(--muted); font-size: 13px; }
+    .intro-script { margin: 0; color: #233344; }
+    .index-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+    .index-list .card h2 { font-size: 20px; margin-bottom: 8px; }
+    @media (max-width: 820px) {
+      .page { padding: 24px 16px 40px; }
+      h1 { font-size: 28px; }
+      .grid, .teacher-grid, .index-list { grid-template-columns: 1fr; }
+      table { display: block; overflow-x: auto; white-space: normal; }
+      .sources { columns: 1; }
+    }
+    @media print {
+      .page { max-width: none; padding: 20mm 16mm; }
+      a { color: inherit; border-bottom: 0; }
+      .card, .callout, .note { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="hero">
+      <p class="kicker">985 / C9 Recommendation Reports</p>
+      <h1>985/C9高校推免专业与导师分类报告</h1>
+      <p class="subtitle">按学校拆分的 HTML 报告入口。每份报告延续东南大学报告结构，包含适合专业、推荐导师、研究领域、代表成果、自我介绍话术、准备清单和资料来源。</p>
+      <div class="meta">
+        <span class="tag">资料时点：2026-06-26</span>
+        <span class="tag">适用背景：西电电子信息大类 / 遥测遥感</span>
+        <span class="tag">学校数量：13</span>
+      </div>
+    </header>
+
+    <section>
+      <h2>学校报告入口</h2>
+      <div class="index-list">
+        
+        <article class="card">
+          <h2><a href="tsinghua.html">清华大学</a></h2>
+          <p><strong>综合排名冲刺</strong></p>
+          <p>清华适合成绩排名、科研经历和英语表达都很强的学生。主线不要泛泛写通信，而应强调“西电电子信息基础 + 雷达/SAR 或空间网络 + 空天信息处理”。</p>
+          <p class="small">主推导师：杨健、陆建华、牛志升</p>
+        </article>
+
+        <article class="card">
+          <h2><a href="pku.html">北京大学</a></h2>
+          <p><strong>C9综合排名冲刺</strong></p>
+          <p>北大适合两条路线：遥感与地理信息研究所的遥感图像/SAR/GIS，以及电子学院的信息与通信工程、无线通信和信号处理。整体难度极高，更适合成绩排名和科研经历都突出的申请人。</p>
+          <p class="small">主推导师：梁存任、李培军、宋令阳</p>
+        </article>
+
+        <article class="card">
+          <h2><a href="sjtu.html">上海交通大学</a></h2>
+          <p><strong>综合排名冲刺</strong></p>
+          <p>上交适合通信、6G、通感一体、低空网络、图像通信和导航感知方向。对你来说，它比纯遥感更适合走“电子信息 + 空天/低空应用”的叙事。</p>
+          <p class="small">主推导师：陶梅霞、武庆庆、郁文贤</p>
+        </article>
+
+        <article class="card">
+          <h2><a href="fudan.html">复旦大学</a></h2>
+          <p><strong>C9综合排名冲刺</strong></p>
+          <p>复旦适合通信、6G、智能无线网络、雷达遥感和图像处理交叉方向。相比武大、北理工，它不是最传统的遥感强校，但若你想冲 C9 综合平台并保持电子信息主线，可以作为冲刺选项。</p>
+          <p class="small">主推导师：徐丰、朱宇、杨涛、王斌</p>
+        </article>
+
+        <article class="card">
+          <h2><a href="zju.html">浙江大学</a></h2>
+          <p><strong>综合排名冲刺</strong></p>
+          <p>浙大适合综合平台冲刺。通信方向更主线，遥感方向偏环境资源和农业遥感；如果你有高光谱、植被、灾害遥感项目，匹配度会上升。</p>
+          <p class="small">主推导师：蔡云龙、黄敬峰</p>
+        </article>
+
+        <article class="card">
+          <h2><a href="whu.html">武汉大学</a></h2>
+          <p><strong>遥感强匹配</strong></p>
+          <p>武大是遥感、测绘、摄影测量和遥感智能处理的强匹配学校。如果你的遥感图像处理、机器学习、GIS、摄影测量项目更突出，武大优先级不低于综合排名冲刺校。</p>
+          <p class="small">主推导师：张良培、钟燕飞、张永军</p>
+        </article>
+
+        <article class="card">
+          <h2><a href="bit.html">北京理工大学</a></h2>
+          <p><strong>雷达/SAR强匹配</strong></p>
+          <p>北理工非常适合雷达、SAR、空天遥感、目标识别方向。它的匹配度取决于你能否把“遥测遥感”讲成“雷达探测、SAR 成像和智能解译”。</p>
+          <p class="small">主推导师：曾涛、师皓、李涵</p>
+        </article>
+
+        <article class="card">
+          <h2><a href="uestc.html">电子科技大学</a></h2>
+          <p><strong>电子信息强匹配</strong></p>
+          <p>电子科大和西电背景最容易讲通，适合雷达成像、无线通信、抗干扰通信、6G、多域传输。若你想提高命中率，它应作为强匹配学校重点准备。</p>
+          <p class="small">主推导师：杨建宇、杨平</p>
+        </article>
+
+        <article class="card">
+          <h2><a href="buaa.html">北京航空航天大学</a></h2>
+          <p><strong>空天信息强匹配</strong></p>
+          <p>北航适合空天地一体化、低空经济、无人系统、导航监视、跨域通信和多源感知。它比传统遥感更偏空天系统与工程应用。</p>
+          <p class="small">主推导师：付进、张军</p>
+        </article>
+
+        <article class="card">
+          <h2><a href="ustc.html">中国科学技术大学</a></h2>
+          <p><strong>C9冲刺 / 理工强校</strong></p>
+          <p>中科大适合雷达信号处理、毫米波感知、图像视频处理、AI 地球物理和遥感信号处理。它的风格偏基础研究和硬核理工，需要你把数学、信号处理和科研训练能力讲清楚。</p>
+          <p class="small">主推导师：陈卫东、伍新明、刘东、陈力</p>
+        </article>
+
+        <article class="card">
+          <h2><a href="nju.html">南京大学</a></h2>
+          <p><strong>C9冲刺 / 遥感通信双线</strong></p>
+          <p>南大适合两条线：电子学院的通信、空天地一体化网络、智能通信；地理与海洋科学学院的遥感图像处理、GIS 和多源遥感融合。</p>
+          <p class="small">主推导师：周海波、杨鲲、杜培军、肖鹏峰</p>
+        </article>
+
+        <article class="card">
+          <h2><a href="hit.html">哈尔滨工业大学</a></h2>
+          <p><strong>C9 / 空天雷达强匹配</strong></p>
+          <p>哈工大非常适合雷达、空天地通信、空间智能遥感、SAR/ISAR 成像和目标识别。它的航天、国防和工程应用属性强，与你的电子信息和遥测遥感背景贴合度高。</p>
+          <p class="small">主推导师：孟维晓、谷延锋、吴小川、张钧萍</p>
+        </article>
+
+        <article class="card">
+          <h2><a href="xjtu.html">西安交通大学</a></h2>
+          <p><strong>C9 / 西北强校</strong></p>
+          <p>西交大适合信息与通信工程、通信感知一体化、遥感光电探测、空间智能和信号处理方向。你在西安读本科，地域联系和院校交流便利也是优势。</p>
+          <p class="small">主推导师：郑通兴、张淳民、曹相湧、杨在</p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>使用建议</h2>
+      <div class="callout">
+        <p><strong>优先级：</strong>清华、北大、上交、复旦、浙大、中科大、南京大学、哈工大、西交大属于综合平台冲刺；武汉大学、北理工、电子科大、北航属于与你方向强匹配的专业冲刺。</p>
+        <p><strong>申请策略：</strong>不要只按学校名气排序。你的最强叙事是“电子信息基础 + 信号处理/通信 + 雷达/SAR/遥感智能处理 + 空天应用场景”。</p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

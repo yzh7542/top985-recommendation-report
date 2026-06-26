@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>西安交通大学推免专业与导师推荐报告</title>
+  <style>
+    :root {
+      --ink: #17212b;
+      --muted: #5b6673;
+      --line: #dbe3ea;
+      --panel: #f7f9fb;
+      --accent: #126b68;
+      --accent-2: #8f4f21;
+      --accent-3: #284f8f;
+      --soft: #eef8f6;
+      --bg: #fff;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--bg);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans SC", "Microsoft YaHei", Arial, sans-serif;
+      line-height: 1.65;
+    }
+    a { color: var(--accent-3); text-decoration: none; border-bottom: 1px solid rgba(40, 79, 143, .28); }
+    a:hover { border-bottom-color: var(--accent-3); }
+    .page { max-width: 1120px; margin: 0 auto; padding: 36px 24px 56px; }
+    .hero { border-bottom: 3px solid var(--accent); padding-bottom: 24px; margin-bottom: 28px; }
+    .kicker { margin: 0 0 8px; color: var(--accent); font-size: 14px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+    h1 { margin: 0; font-size: 34px; line-height: 1.2; letter-spacing: 0; }
+    h2 { margin: 0 0 14px; font-size: 24px; line-height: 1.25; letter-spacing: 0; }
+    h3 { margin: 0 0 8px; font-size: 18px; line-height: 1.35; letter-spacing: 0; }
+    p { margin: 8px 0; }
+    section { margin-top: 34px; }
+    .subtitle { max-width: 900px; margin: 14px 0 0; color: var(--muted); font-size: 16px; }
+    .meta, .nav { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+    .tag, .nav a {
+      display: inline-flex; align-items: center; min-height: 30px; padding: 3px 10px;
+      border: 1px solid var(--line); border-radius: 6px; background: var(--panel);
+      color: #334155; font-size: 13px; font-weight: 700;
+    }
+    .nav a { border-bottom: 1px solid var(--line); }
+    .callout { background: var(--soft); border: 1px solid rgba(18, 107, 104, .25); border-radius: 8px; padding: 18px; }
+    .note { padding: 14px 16px; border-left: 4px solid var(--accent-2); background: #fff8f0; color: #423224; border-radius: 0 6px 6px 0; }
+    .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+    .card { border: 1px solid var(--line); border-radius: 8px; background: #fff; padding: 16px; }
+    .card.primary { border-color: rgba(18, 107, 104, .4); box-shadow: inset 4px 0 0 var(--accent); }
+    .card.secondary { box-shadow: inset 4px 0 0 var(--accent-3); }
+    .card.tertiary { box-shadow: inset 4px 0 0 var(--accent-2); }
+    table { width: 100%; border-collapse: collapse; margin-top: 12px; font-size: 14px; }
+    th, td { border: 1px solid var(--line); padding: 10px 12px; vertical-align: top; text-align: left; }
+    th { background: #eef4f7; font-weight: 800; }
+    .rank { width: 84px; color: var(--accent); font-weight: 800; white-space: nowrap; }
+    .teacher-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+    .teacher { display: flex; flex-direction: column; gap: 10px; min-height: 100%; }
+    .teacher header { display: flex; justify-content: space-between; gap: 10px; align-items: baseline; border: 0; padding: 0; margin: 0; }
+    .teacher .name { font-size: 19px; font-weight: 800; }
+    .label { display: inline-block; padding: 2px 8px; border-radius: 5px; background: #e8f3f1; color: var(--accent); font-size: 12px; font-weight: 800; white-space: nowrap; }
+    .teacher dl { margin: 0; display: grid; gap: 7px; }
+    .teacher dt { font-weight: 800; color: #263746; }
+    .teacher dd { margin: 0; color: var(--muted); }
+    .compact-list, .prep-list { margin: 8px 0 0; padding-left: 20px; }
+    .compact-list li, .prep-list li { margin: 5px 0; }
+    .sources { columns: 2; padding-left: 20px; }
+    .small { color: var(--muted); font-size: 13px; }
+    .intro-script { margin: 0; color: #233344; }
+    .index-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+    .index-list .card h2 { font-size: 20px; margin-bottom: 8px; }
+    @media (max-width: 820px) {
+      .page { padding: 24px 16px 40px; }
+      h1 { font-size: 28px; }
+      .grid, .teacher-grid, .index-list { grid-template-columns: 1fr; }
+      table { display: block; overflow-x: auto; white-space: normal; }
+      .sources { columns: 1; }
+    }
+    @media print {
+      .page { max-width: none; padding: 20mm 16mm; }
+      a { color: inherit; border-bottom: 0; }
+      .card, .callout, .note { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="hero">
+      <p class="kicker">University Recommendation Report</p>
+      <h1>西安交通大学推免专业与导师推荐报告</h1>
+      <p class="subtitle">面向西安电子科技大学大三学生，本科方向为电子信息大类、信息力学与遥测遥感。报告按“学校维度”拆分，保持东南大学报告的结构：专业选择、导师介绍、成果、匹配理由、自我介绍话术和准备清单。</p>
+      <div class="meta">
+        <span class="tag">资料时点：2026-06-26</span>
+        <span class="tag">定位：C9 / 西北强校</span>
+        <span class="tag">核心方向：通信 / 雷达 SAR / 遥感智能处理</span>
+        <span class="tag">来源：高校官网、学院/导师主页、官方新闻</span>
+      </div>
+      <nav class="nav">
+        <a href="index.html">返回总入口</a>
+      </nav>
+    </header>
+
+    <section>
+      <h2>一页结论</h2>
+      <div class="callout">
+        <p><strong>学校定位：</strong>西交大适合信息与通信工程、通信感知一体化、遥感光电探测、空间智能和信号处理方向。你在西安读本科，地域联系和院校交流便利也是优势。</p>
+        <p><strong>申请建议：</strong>优先关注信息与通信工程学院、电子与信息学部、空间光学/遥感光电方向和 AI+遥感图像方向。</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>适合专业推荐</h2>
+      <table>
+        <thead>
+          <tr><th class="rank">优先级</th><th>学院与专业/方向</th><th>匹配理由</th><th>建议导师池</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="rank">S 级</td><td>信息与通信工程学院：信息与通信工程 / 电子信息</td><td>学院拥有信息与通信工程一级学科，适合通信、信号处理、电磁场与微波。</td><td>郑通兴、杨在</td></tr>
+          <tr><td class="rank">A 级</td><td>遥感光电 / 空间智能 / 图像理解</td><td>适合高光谱遥感、光电探测、遥感图像解译和 AI+信号处理。</td><td>张淳民、曹相湧、潘宗序</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>主推导师介绍</h2>
+      <div class="teacher-grid">
+
+        <article class="card teacher primary">
+          <header><span class="name">郑通兴</span><span class="label">6G / 通信感知一体化</span></header>
+          <dl>
+            <dt>单位与身份</dt><dd>西安交通大学信息与通信工程学院教授。</dd>
+            <dt>研究领域</dt><dd>5G/B5G/6G 无线通信技术、物理层安全、隐蔽通信、通信感知一体化、智能超表面、随机几何理论。</dd>
+            <dt>代表成果</dt><dd>教师主页显示其主持/参与国家自然科学基金、国家重点研发计划子课题、863 项目等 20 余项课题，发表论文 90 余篇，申请发明专利 10 余项。</dd>
+            <dt>适配理由</dt><dd>适合你从电子信息和遥测遥感转向 6G、通感一体和智能超表面方向。</dd>
+            <dt>来源</dt><dd><a href="https://gr.xjtu.edu.cn/web/zhengtx/home">西安交通大学郑通兴主页</a></dd>
+          </dl>
+        </article>
+
+        <article class="card teacher secondary">
+          <header><span class="name">张淳民</span><span class="label">高光谱遥感 / 光电探测</span></header>
+          <dl>
+            <dt>单位与身份</dt><dd>西安交通大学教授（二级）、博士生导师，空间光学研究所所长。</dd>
+            <dt>研究领域</dt><dd>空间目标高分辨率探测与识别、偏振成像光谱与多维信息获取、大气遥感探测、高光谱遥感与光电图像处理、先进光学仪器。</dd>
+            <dt>代表成果</dt><dd>西安交通大学教师页显示其享受国务院政府特殊津贴，长期从事空间光学、偏振成像光谱、高光谱遥感和光电图像处理研究。</dd>
+            <dt>适配理由</dt><dd>适合把遥测遥感方向延伸到高光谱遥感、空间目标探测和光电成像系统。</dd>
+            <dt>来源</dt><dd><a href="https://www.xjtu.edu.cn/jsnr.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1632&amp;wbwbxjtuteacherid=146">西安交通大学张淳民教师页</a></dd>
+          </dl>
+        </article>
+
+        <article class="card teacher tertiary">
+          <header><span class="name">曹相湧</span><span class="label">遥感图像解译 / 空间智能</span></header>
+          <dl>
+            <dt>单位与身份</dt><dd>西安交通大学长聘副教授、博士生导师。</dd>
+            <dt>研究领域</dt><dd>机器学习、计算机视觉、底层图像处理、遥感图像解译、生成式大模型、智能体、空间智能。</dd>
+            <dt>代表成果</dt><dd>教师主页显示其在 TPAMI、IJCV、TIP、CVPR、ICCV 等国际期刊和会议发表论文 80 余篇，其中一作或通讯 48 篇。</dd>
+            <dt>适配理由</dt><dd>适合“遥感图像 + AI + 空间智能”的方向，尤其适合有代码和深度学习项目的申请人。</dd>
+            <dt>来源</dt><dd><a href="https://gr.xjtu.edu.cn/caoxiangyong/">西安交通大学曹相湧主页</a></dd>
+          </dl>
+        </article>
+
+        <article class="card teacher tertiary">
+          <header><span class="name">杨在</span><span class="label">信号处理 / 稀疏优化</span></header>
+          <dl>
+            <dt>单位与身份</dt><dd>西安交通大学教授、博士生导师，国家优青。</dd>
+            <dt>研究领域</dt><dd>信号处理、阵列处理、优化与数学方法等。</dd>
+            <dt>代表成果</dt><dd>教师主页显示其为 IEEE Transactions on Signal Processing 编委、IEEE 信号处理学会 SAM 技术委员会委员，获国家优秀青年基金等。</dd>
+            <dt>适配理由</dt><dd>适合把西电信号处理基础做深，面向雷达、通信和感知中的数学建模与优化。</dd>
+            <dt>来源</dt><dd><a href="https://gr.xjtu.edu.cn/yangzai/">西安交通大学杨在主页</a></dd>
+          </dl>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>面向导师的自我介绍与准备清单</h2>
+      <p class="note">下面的话术不是逐字照读稿，而是帮助你把本科背景、目标方向和导师研究连接起来。正式邮件建议控制在 120-180 字；面试自我介绍控制在 45-60 秒，并用你的真实项目替换其中的通用表达。</p>
+      <table>
+        <thead>
+          <tr><th>导师方向</th><th>自我介绍话术</th><th>需要努力的方向</th><th>资料与能力准备</th></tr>
+        </thead>
+        <tbody>
+
+          <tr>
+            <td><strong>郑通兴</strong><br>6G / 通信感知一体化</td>
+            <td><p class="intro-script">老师您好，我来自西电电子信息大类，方向涉及遥测遥感和信号处理。我对 5G/B5G/6G、通信感知一体化和智能超表面很感兴趣，希望把遥感/空天感知场景中的信息获取需求转化为无线通信与系统优化问题。</p></td>
+            <td><ul class="prep-list"><li>补强无线通信、物理层安全、随机几何和智能超表面。</li><li>理解 ISAC 系统模型、波形设计和信道建模。</li></ul></td>
+            <td><ul class="prep-list"><li>准备一个 RIS 或通感一体仿真项目。</li><li>能用图说明系统模型、信号流程和优化目标。</li></ul></td>
+          </tr>
+
+          <tr>
+            <td><strong>张淳民</strong><br>高光谱遥感 / 光电探测</td>
+            <td><p class="intro-script">老师您好，我本科方向涉及电子信息和遥测遥感，对高光谱遥感、空间目标探测和光电图像处理很感兴趣。希望在研究生阶段把信号处理、遥感数据处理和成像系统知识结合起来，研究多维信息获取与智能解译。</p></td>
+            <td><ul class="prep-list"><li>补强光学成像、光谱遥感、偏振成像和图像处理。</li><li>学习高光谱数据预处理、反演和目标识别方法。</li></ul></td>
+            <td><ul class="prep-list"><li>准备高光谱分类或光电遥感图像处理项目。</li><li>能说明传感器、数据、算法和应用场景之间的关系。</li></ul></td>
+          </tr>
+
+          <tr>
+            <td><strong>曹相湧</strong><br>遥感图像解译 / 空间智能</td>
+            <td><p class="intro-script">老师您好，我来自西电电子信息大类遥测遥感相关方向，对遥感图像解译、计算机视觉和空间智能很感兴趣。希望把本科阶段的遥感数据处理和编程基础，用于遥感目标检测、跨域泛化和生成式模型研究。</p></td>
+            <td><ul class="prep-list"><li>补强深度学习、计算机视觉、目标检测和遥感图像解译。</li><li>学习少样本、跨域跨模态、生成式模型在遥感中的应用。</li></ul></td>
+            <td><ul class="prep-list"><li>准备一个遥感目标检测/变化检测/语义分割项目。</li><li>整理 GitHub 代码、实验指标、可视化和失败案例。</li></ul></td>
+          </tr>
+
+          <tr>
+            <td><strong>杨在</strong><br>信号处理 / 稀疏优化</td>
+            <td><p class="intro-script">老师您好，我本科来自西电电子信息大类，学习过信号处理、通信和遥测遥感相关课程。我对信号处理中的稀疏建模、阵列处理和优化方法很感兴趣，希望将这些方法用于雷达/遥感/通信感知问题。</p></td>
+            <td><ul class="prep-list"><li>补强线性代数、凸优化、统计信号处理和阵列信号处理。</li><li>训练从问题建模到算法证明再到仿真的完整能力。</li></ul></td>
+            <td><ul class="prep-list"><li>准备一个稀疏恢复、DOA 估计或通信信号处理仿真。</li><li>把数学推导和代码复现整理成 PDF 技术报告。</li></ul></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>申请策略</h2>
+      <div class="grid">
+        <div class="card primary">
+          <h3>主线叙事</h3>
+          <p>建议统一包装为“西电电子信息背景 + 遥测遥感应用场景 + 信号处理/机器学习/通信网络方法”。联系 西安交通大学 时，不要只说想保研，要明确自己想解决哪类感知、通信或遥感数据处理问题。</p>
+        </div>
+        <div class="card secondary">
+          <h3>优先准备材料</h3>
+          <ul class="compact-list">
+            <li>一页中文简历和一页英文简历。</li>
+            <li>成绩排名、绩点、核心课成绩截图或证明。</li>
+            <li>1-2 个可展示项目：代码、报告、实验图、指标和失败样例。</li>
+            <li>每位导师单独写 2-3 句匹配理由，避免群发同一封邮件。</li>
+          </ul>
+        </div>
+        <div class="card tertiary">
+          <h3>邮件标题模板</h3>
+          <p>2027届推免咨询-西安电子科技大学-姓名-西安交通大学-6G / 通信感知一体化</p>
+        </div>
+        <div class="card">
+          <h3>风险提醒</h3>
+          <ul class="compact-list">
+            <li>导师主页和招生状态会变化，预联系前必须复核当年夏令营、预推免和招生目录。</li>
+            <li>院士或团队负责人不一定直接招硕士，建议同步关注团队青年 PI、长聘副教授和研究员。</li>
+            <li>若你的实际专业课程与“信息力学/遥测遥感”不完全一致，应按成绩单重新微调方向。</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>资料来源</h2>
+      <ul class="sources">
+        <li><a href="https://gr.xjtu.edu.cn/web/zhengtx/home">西安交通大学郑通兴主页</a></li>
+        <li><a href="https://www.xjtu.edu.cn/jsnr.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1632&amp;wbwbxjtuteacherid=146">西安交通大学张淳民教师页</a></li>
+        <li><a href="https://gr.xjtu.edu.cn/caoxiangyong/">西安交通大学曹相湧主页</a></li>
+        <li><a href="https://gr.xjtu.edu.cn/yangzai/">西安交通大学杨在主页</a></li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>

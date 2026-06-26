@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>武汉大学推免专业与导师推荐报告</title>
+  <style>
+    :root {
+      --ink: #17212b;
+      --muted: #5b6673;
+      --line: #dbe3ea;
+      --panel: #f7f9fb;
+      --accent: #126b68;
+      --accent-2: #8f4f21;
+      --accent-3: #284f8f;
+      --soft: #eef8f6;
+      --bg: #fff;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--bg);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans SC", "Microsoft YaHei", Arial, sans-serif;
+      line-height: 1.65;
+    }
+    a { color: var(--accent-3); text-decoration: none; border-bottom: 1px solid rgba(40, 79, 143, .28); }
+    a:hover { border-bottom-color: var(--accent-3); }
+    .page { max-width: 1120px; margin: 0 auto; padding: 36px 24px 56px; }
+    .hero { border-bottom: 3px solid var(--accent); padding-bottom: 24px; margin-bottom: 28px; }
+    .kicker { margin: 0 0 8px; color: var(--accent); font-size: 14px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+    h1 { margin: 0; font-size: 34px; line-height: 1.2; letter-spacing: 0; }
+    h2 { margin: 0 0 14px; font-size: 24px; line-height: 1.25; letter-spacing: 0; }
+    h3 { margin: 0 0 8px; font-size: 18px; line-height: 1.35; letter-spacing: 0; }
+    p { margin: 8px 0; }
+    section { margin-top: 34px; }
+    .subtitle { max-width: 900px; margin: 14px 0 0; color: var(--muted); font-size: 16px; }
+    .meta, .nav { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+    .tag, .nav a {
+      display: inline-flex; align-items: center; min-height: 30px; padding: 3px 10px;
+      border: 1px solid var(--line); border-radius: 6px; background: var(--panel);
+      color: #334155; font-size: 13px; font-weight: 700;
+    }
+    .nav a { border-bottom: 1px solid var(--line); }
+    .callout { background: var(--soft); border: 1px solid rgba(18, 107, 104, .25); border-radius: 8px; padding: 18px; }
+    .note { padding: 14px 16px; border-left: 4px solid var(--accent-2); background: #fff8f0; color: #423224; border-radius: 0 6px 6px 0; }
+    .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+    .card { border: 1px solid var(--line); border-radius: 8px; background: #fff; padding: 16px; }
+    .card.primary { border-color: rgba(18, 107, 104, .4); box-shadow: inset 4px 0 0 var(--accent); }
+    .card.secondary { box-shadow: inset 4px 0 0 var(--accent-3); }
+    .card.tertiary { box-shadow: inset 4px 0 0 var(--accent-2); }
+    table { width: 100%; border-collapse: collapse; margin-top: 12px; font-size: 14px; }
+    th, td { border: 1px solid var(--line); padding: 10px 12px; vertical-align: top; text-align: left; }
+    th { background: #eef4f7; font-weight: 800; }
+    .rank { width: 84px; color: var(--accent); font-weight: 800; white-space: nowrap; }
+    .teacher-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+    .teacher { display: flex; flex-direction: column; gap: 10px; min-height: 100%; }
+    .teacher header { display: flex; justify-content: space-between; gap: 10px; align-items: baseline; border: 0; padding: 0; margin: 0; }
+    .teacher .name { font-size: 19px; font-weight: 800; }
+    .label { display: inline-block; padding: 2px 8px; border-radius: 5px; background: #e8f3f1; color: var(--accent); font-size: 12px; font-weight: 800; white-space: nowrap; }
+    .teacher dl { margin: 0; display: grid; gap: 7px; }
+    .teacher dt { font-weight: 800; color: #263746; }
+    .teacher dd { margin: 0; color: var(--muted); }
+    .compact-list, .prep-list { margin: 8px 0 0; padding-left: 20px; }
+    .compact-list li, .prep-list li { margin: 5px 0; }
+    .sources { columns: 2; padding-left: 20px; }
+    .small { color: var(--muted); font-size: 13px; }
+    .intro-script { margin: 0; color: #233344; }
+    .index-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+    .index-list .card h2 { font-size: 20px; margin-bottom: 8px; }
+    @media (max-width: 820px) {
+      .page { padding: 24px 16px 40px; }
+      h1 { font-size: 28px; }
+      .grid, .teacher-grid, .index-list { grid-template-columns: 1fr; }
+      table { display: block; overflow-x: auto; white-space: normal; }
+      .sources { columns: 1; }
+    }
+    @media print {
+      .page { max-width: none; padding: 20mm 16mm; }
+      a { color: inherit; border-bottom: 0; }
+      .card, .callout, .note { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="hero">
+      <p class="kicker">University Recommendation Report</p>
+      <h1>武汉大学推免专业与导师推荐报告</h1>
+      <p class="subtitle">面向西安电子科技大学大三学生，本科方向为电子信息大类、信息力学与遥测遥感。报告按“学校维度”拆分，保持东南大学报告的结构：专业选择、导师介绍、成果、匹配理由、自我介绍话术和准备清单。</p>
+      <div class="meta">
+        <span class="tag">资料时点：2026-06-26</span>
+        <span class="tag">定位：遥感强匹配</span>
+        <span class="tag">核心方向：通信 / 雷达 SAR / 遥感智能处理</span>
+        <span class="tag">来源：高校官网、学院/导师主页、官方新闻</span>
+      </div>
+      <nav class="nav">
+        <a href="index.html">返回总入口</a>
+      </nav>
+    </header>
+
+    <section>
+      <h2>一页结论</h2>
+      <div class="callout">
+        <p><strong>学校定位：</strong>武大是遥感、测绘、摄影测量和遥感智能处理的强匹配学校。如果你的遥感图像处理、机器学习、GIS、摄影测量项目更突出，武大优先级不低于综合排名冲刺校。</p>
+        <p><strong>申请建议：</strong>优先申请遥感信息工程学院、测绘遥感信息工程全国重点实验室相关方向，用“电子信息 + 遥感智能处理”作为申请叙事。</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>适合专业推荐</h2>
+      <table>
+        <thead>
+          <tr><th class="rank">优先级</th><th>学院与专业/方向</th><th>匹配理由</th><th>建议导师池</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="rank">S 级</td><td>遥感科学与技术 / 测绘科学与技术</td><td>直接覆盖遥感影像解译、高光谱、多源融合、摄影测量。</td><td>张良培、钟燕飞、张永军</td></tr>
+          <tr><td class="rank">A 级</td><td>电子信息交叉方向</td><td>适合把深度学习、信号处理、遥感数据处理做成工程化项目。</td><td>张良培、钟燕飞</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>主推导师介绍</h2>
+      <div class="teacher-grid">
+
+        <article class="card teacher primary">
+          <header><span class="name">张良培</span><span class="label">遥感智能处理</span></header>
+          <dl>
+            <dt>单位与身份</dt><dd>武汉大学测绘遥感信息工程国家重点实验室教授、博士生导师，IEEE Fellow。</dd>
+            <dt>研究领域</dt><dd>遥感技术与应用、图像处理、模式识别、遥感影像智能分析。</dd>
+            <dt>代表成果</dt><dd>RSIDEA 页面显示其发表科研论文 400 余篇，拥有 16 项专利，主持或作为骨干完成 30 多项国家级科研项目，获国家测绘科技进步一等奖、教育部自然科学一等奖等。</dd>
+            <dt>适配理由</dt><dd>如果你想把遥感图像处理、机器学习、目标识别作为主线，武大张良培团队是第一梯队。</dd>
+            <dt>来源</dt><dd><a href="https://rsidea.whu.edu.cn/teachers.htm">武汉大学 RSIDEA 研究成员</a></dd>
+          </dl>
+        </article>
+
+        <article class="card teacher secondary">
+          <header><span class="name">钟燕飞</span><span class="label">高光谱遥感</span></header>
+          <dl>
+            <dt>单位与身份</dt><dd>武汉大学测绘遥感信息工程国家重点实验室二级教授、博士生导师，遥感影像信息处理研究室主任。</dd>
+            <dt>研究领域</dt><dd>高光谱遥感信息处理、高分辨率遥感影像理解、多源遥感数据地学解译、城市/农业/应急应用。</dd>
+            <dt>代表成果</dt><dd>个人主页显示其在 RSE、IEEE TGRS、ISPRS P&amp;RS、IEEE TPAMI/TIP/TNNLS 以及 ICCV、CVPR、NeurIPS 等发表论文 260 余篇，25 篇入选 ESI 高被引/热点论文，发布 WHU-Hi、LoveDA 等数据集。</dd>
+            <dt>适配理由</dt><dd>很适合“遥感图像 + AI + 多源数据融合”路线，尤其适合有深度学习项目的电子信息学生。</dd>
+            <dt>来源</dt><dd><a href="https://rsidea.whu.edu.cn/zhongyanfei.htm">钟燕飞教授主页</a></dd>
+          </dl>
+        </article>
+
+        <article class="card teacher tertiary">
+          <header><span class="name">张永军</span><span class="label">摄影测量 / 实景三维</span></header>
+          <dl>
+            <dt>单位与身份</dt><dd>武汉大学遥感信息工程学院院长、二级教授、博士生导师。</dd>
+            <dt>研究领域</dt><dd>数字摄影测量与遥感、航空航天光学影像几何处理、多源数据融合、低空无人机摄影测量、实景三维建模。</dd>
+            <dt>代表成果</dt><dd>主页显示其负责研制我国首套完全自主知识产权的航空航天遥感影像数字摄影测量网格 DPGrid 处理系统；以第一完成人获国家科技进步二等奖、测绘科技进步特等奖等。</dd>
+            <dt>适配理由</dt><dd>适合遥感几何处理、摄影测量、低空无人机遥感和多源数据联合处理方向。</dd>
+            <dt>来源</dt><dd><a href="https://skyearth.org/zhangyj/">张永军教授主页</a></dd>
+          </dl>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>面向导师的自我介绍与准备清单</h2>
+      <p class="note">下面的话术不是逐字照读稿，而是帮助你把本科背景、目标方向和导师研究连接起来。正式邮件建议控制在 120-180 字；面试自我介绍控制在 45-60 秒，并用你的真实项目替换其中的通用表达。</p>
+      <table>
+        <thead>
+          <tr><th>导师方向</th><th>自我介绍话术</th><th>需要努力的方向</th><th>资料与能力准备</th></tr>
+        </thead>
+        <tbody>
+
+          <tr>
+            <td><strong>张良培</strong><br>遥感智能处理</td>
+            <td><p class="intro-script">老师您好，我本科来自西电电子信息大类，方向与遥测遥感相关。我对遥感影像智能分析、模式识别和多源数据处理很感兴趣，希望把电子信息背景中的信号处理、机器学习和编程能力用于高分辨率遥感影像解译研究。</p></td>
+            <td><ul class="prep-list"><li>补强遥感图像分类、目标检测、变化检测和深度学习。</li><li>熟悉 CNN、Transformer、多模态融合与模型评估指标。</li></ul></td>
+            <td><ul class="prep-list"><li>准备 LoveDA、WHU、ISPRS 或 DOTA 类数据集实验。</li><li>整理项目海报：数据、方法、指标、消融、失败案例。</li></ul></td>
+          </tr>
+
+          <tr>
+            <td><strong>钟燕飞</strong><br>高光谱遥感</td>
+            <td><p class="intro-script">老师您好，我的本科方向包含遥测遥感和电子信息基础，对高光谱遥感、多源遥感数据融合和地物智能解译非常感兴趣。我希望在研究生阶段继续强化遥感影像处理和深度学习能力，服务于城市、农业或应急遥感应用。</p></td>
+            <td><ul class="prep-list"><li>补强高光谱数据预处理、降维、分类和域适应。</li><li>学习多源融合、语义分割和遥感基础地学知识。</li></ul></td>
+            <td><ul class="prep-list"><li>准备 Indian Pines、Pavia、WHU-Hi 或 LoveDA 实验。</li><li>能说明高光谱与普通 RGB/多光谱数据的差异。</li></ul></td>
+          </tr>
+
+          <tr>
+            <td><strong>张永军</strong><br>摄影测量 / 实景三维</td>
+            <td><p class="intro-script">老师您好，我本科阶段学习电子信息与遥测遥感相关课程，对航空航天影像几何处理、摄影测量和实景三维建模很感兴趣。希望将信号处理、图像处理和工程实现能力用于低空无人机遥感、三维重建和多源数据融合研究。</p></td>
+            <td><ul class="prep-list"><li>补强摄影测量、相机模型、三维重建和几何校正。</li><li>学习 SfM、MVS、点云处理和无人机遥感流程。</li></ul></td>
+            <td><ul class="prep-list"><li>准备一个无人机影像建模或遥感影像配准项目。</li><li>熟悉 OpenCV、COLMAP、CloudCompare 或 GIS 软件。</li></ul></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>申请策略</h2>
+      <div class="grid">
+        <div class="card primary">
+          <h3>主线叙事</h3>
+          <p>建议统一包装为“西电电子信息背景 + 遥测遥感应用场景 + 信号处理/机器学习/通信网络方法”。联系 武汉大学 时，不要只说想保研，要明确自己想解决哪类感知、通信或遥感数据处理问题。</p>
+        </div>
+        <div class="card secondary">
+          <h3>优先准备材料</h3>
+          <ul class="compact-list">
+            <li>一页中文简历和一页英文简历。</li>
+            <li>成绩排名、绩点、核心课成绩截图或证明。</li>
+            <li>1-2 个可展示项目：代码、报告、实验图、指标和失败样例。</li>
+            <li>每位导师单独写 2-3 句匹配理由，避免群发同一封邮件。</li>
+          </ul>
+        </div>
+        <div class="card tertiary">
+          <h3>邮件标题模板</h3>
+          <p>2027届推免咨询-西安电子科技大学-姓名-武汉大学-遥感智能处理</p>
+        </div>
+        <div class="card">
+          <h3>风险提醒</h3>
+          <ul class="compact-list">
+            <li>导师主页和招生状态会变化，预联系前必须复核当年夏令营、预推免和招生目录。</li>
+            <li>院士或团队负责人不一定直接招硕士，建议同步关注团队青年 PI、长聘副教授和研究员。</li>
+            <li>若你的实际专业课程与“信息力学/遥测遥感”不完全一致，应按成绩单重新微调方向。</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>资料来源</h2>
+      <ul class="sources">
+        <li><a href="https://rsidea.whu.edu.cn/teachers.htm">武汉大学 RSIDEA 研究成员</a></li>
+        <li><a href="https://rsidea.whu.edu.cn/zhongyanfei.htm">钟燕飞教授主页</a></li>
+        <li><a href="https://skyearth.org/zhangyj/">张永军教授主页</a></li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>
