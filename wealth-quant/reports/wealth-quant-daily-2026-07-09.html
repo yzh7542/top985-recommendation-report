@@ -1,0 +1,1042 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>全 A 股羊哥策略自动化日报 2026-07-09</title>
+  <style>
+:root {
+  color-scheme: light;
+  --bg: #f7f8fa;
+  --panel: #ffffff;
+  --text: #18202a;
+  --muted: #667085;
+  --line: #d9dee7;
+  --accent: #176b87;
+  --warn: #a15c07;
+  --warn-bg: #fff3d6;
+  --ok: #1e7a46;
+  --ok-bg: #e9f7ef;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--text); font: 14px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+header { background: #ffffff; border-bottom: 1px solid var(--line); }
+.header-inner, main { width: min(1240px, calc(100vw - 32px)); margin: 0 auto; }
+.header-inner { padding: 28px 0 22px; }
+h1 { margin: 0 0 10px; font-size: 28px; line-height: 1.2; letter-spacing: 0; }
+h2 { margin: 0 0 14px; font-size: 20px; }
+.subtitle { margin: 0; color: var(--muted); }
+main { padding: 22px 0 44px; }
+section { margin: 0 0 22px; }
+.panel { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+.panel-body { padding: 18px; }
+.meta-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+.metric { border: 1px solid var(--line); border-radius: 8px; padding: 12px; background: #fbfcfe; }
+.metric span { display: block; color: var(--muted); font-size: 12px; }
+.metric strong { display: block; margin-top: 4px; font-size: 16px; }
+.table-wrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; min-width: 1180px; }
+th, td { padding: 10px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { text-align: left; font-size: 12px; color: var(--muted); background: #f2f5f8; white-space: nowrap; }
+td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+.badge { display: inline-flex; align-items: center; min-height: 24px; padding: 2px 8px; border-radius: 999px; font-size: 12px; white-space: nowrap; }
+.badge.buy { color: #0f6642; background: #e7f6ef; }
+.badge.hold { color: #7a4b08; background: #fff1cc; }
+.badge.ok { color: var(--ok); background: var(--ok-bg); }
+.badge.warn { color: var(--warn); background: var(--warn-bg); }
+.detail-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.detail { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 14px; }
+.detail h3 { margin: 0 0 10px; font-size: 16px; }
+.detail p { margin: 7px 0; color: var(--muted); }
+.detail strong { color: var(--text); }
+.rules li { margin: 8px 0; }
+.footer-note { color: var(--muted); font-size: 12px; }
+@media (max-width: 860px) {
+  .meta-grid, .detail-grid { grid-template-columns: 1fr; }
+  h1 { font-size: 24px; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="header-inner">
+    <h1>全 A 股羊哥策略自动化日报</h1>
+    <p class="subtitle">数据日期：2026-07-09 收盘；生成日期：2026-07-09。默认覆盖沪深主板、科创板、创业板可交易 A 股。</p>
+  </div>
+</header>
+<main>
+  <section class="panel">
+    <div class="panel-body meta-grid">
+      <div class="metric"><span>数据源</span><strong>BaoStock 日线/估值，失败时回退 Eastmoney</strong></div>
+      <div class="metric"><span>全 A 股票池</span><strong>4989 只</strong></div>
+      <div class="metric"><span>有效评分</span><strong>4836 只</strong></div>
+      <div class="metric"><span>候选池</span><strong>54 只</strong></div>
+      <div class="metric"><span>沪市主板</span><strong>1629 只</strong></div><div class="metric"><span>科创板</span><strong>596 只</strong></div><div class="metric"><span>深市主板</span><strong>1412 只</strong></div><div class="metric"><span>创业板</span><strong>1352 只</strong></div>
+    </div>
+  </section>
+
+  <section class="panel">
+    <div class="panel-body rules">
+      <h2>回测与复盘</h2>
+      <ul><li><strong>单策略样例回测</strong>：work/daily/2026-07-09/backtest-sample.md</li><li><strong>组合样例回测</strong>：work/daily/2026-07-09/portfolio-backtest-sample.md</li><li><strong>纸面运行复盘</strong>：work/daily/2026-07-09/paper-run-review.md</li></ul>
+      <p class="footer-note">自动化流程先做数据检查、回测/复盘产物生成，再进行全 A 股筛选与飞书推送。当前报告仅作研究辅助，不构成投资建议。</p>
+    </div>
+  </section>
+
+  
+  <section class="panel">
+    <div class="panel-body rules">
+      <h2>今日黑马关注</h2>
+      <p class="footer-note">按“买入候选优先、综合分优先、纪律过滤后可执行”提炼 3 只黑马候选，供飞书摘要优先展示。</p>
+      <ul>
+        <li><strong>1. TCL科技</strong>（000100.SZ / 深市主板）
+        综合分 89.59，操作：强势候选；不追高，等回踩/缩量企稳再动手，参考区间 5.12-5.33，纪律线 4.98。</li>
+
+        <li><strong>2. 招商证券</strong>（600999.SH / 沪市主板）
+        综合分 88.86，操作：候选买入；等回踩MA20不破或放量突破后分批，参考区间 20.01-20.82，纪律线 20.21。</li>
+
+        <li><strong>3. 国泰海通</strong>（601211.SH / 沪市主板）
+        综合分 87.95，操作：强势候选；不追高，等回踩/缩量企稳再动手，参考区间 17.89-18.61，纪律线 17.55。</li>
+
+      </ul>
+    </div>
+  </section>
+
+
+  <section class="panel">
+    <div class="panel-body">
+      <h2>全市场排序前 20</h2>
+      <p class="footer-note">排序为“羊哥策略分 + 趋势量价 + 估值流动性 + 追高风险降权”。排名靠前不代表立即追买。</p>
+    </div>
+    
+<div class="table-wrap">
+  <table>
+    <thead>
+      <tr>
+        <th class="num">排名</th><th>代码</th><th>名称</th><th>板块</th><th class="num">综合分</th><th class="num">羊哥分</th><th>操作</th><th class="num">收盘</th><th class="num">20日涨幅</th><th class="num">60日涨幅</th><th class="num">PE</th><th class="num">PB</th><th class="num">成交额</th><th>风险提示</th>
+      </tr>
+    </thead>
+    <tbody>
+<tr>
+  <td class="num">1</td>
+  <td><strong>000100.SZ</strong></td>
+  <td>TCL科技</td>
+  <td>深市主板</td>
+  <td class="num">89.59</td>
+  <td class="num">87.59</td>
+  <td><span class="badge hold">强势候选；不追高，等回踩/缩量企稳再动手</span></td>
+  <td class="num">5.36</td>
+  <td class="num">17.03%</td>
+  <td class="num">25.93%</td>
+  <td class="num">22.03</td>
+  <td class="num">1.78</td>
+  <td class="num">72.19亿</td>
+  <td><span class="badge warn">波动偏高</span></td>
+</tr>
+
+<tr>
+  <td class="num">2</td>
+  <td><strong>600999.SH</strong></td>
+  <td>招商证券</td>
+  <td>沪市主板</td>
+  <td class="num">88.86</td>
+  <td class="num">92.36</td>
+  <td><span class="badge buy">候选买入；等回踩MA20不破或放量突破后分批</span></td>
+  <td class="num">21.75</td>
+  <td class="num">26.45%</td>
+  <td class="num">36.96%</td>
+  <td class="num">14.21</td>
+  <td class="num">1.52</td>
+  <td class="num">38.66亿</td>
+  <td><span class="badge ok">无</span></td>
+</tr>
+
+<tr>
+  <td class="num">3</td>
+  <td><strong>601211.SH</strong></td>
+  <td>国泰海通</td>
+  <td>沪市主板</td>
+  <td class="num">87.95</td>
+  <td class="num">85.95</td>
+  <td><span class="badge hold">强势候选；不追高，等回踩/缩量企稳再动手</span></td>
+  <td class="num">18.87</td>
+  <td class="num">12.85%</td>
+  <td class="num">12.39%</td>
+  <td class="num">15.15</td>
+  <td class="num">1.02</td>
+  <td class="num">23.97亿</td>
+  <td><span class="badge warn">量能不足</span></td>
+</tr>
+
+<tr>
+  <td class="num">4</td>
+  <td><strong>601995.SH</strong></td>
+  <td>中金公司</td>
+  <td>沪市主板</td>
+  <td class="num">87.41</td>
+  <td class="num">87.41</td>
+  <td><span class="badge buy">候选买入；等回踩MA20不破或放量突破后分批</span></td>
+  <td class="num">37.05</td>
+  <td class="num">14.07%</td>
+  <td class="num">11.76%</td>
+  <td class="num">15.79</td>
+  <td class="num">1.74</td>
+  <td class="num">15.67亿</td>
+  <td><span class="badge ok">无</span></td>
+</tr>
+
+<tr>
+  <td class="num">5</td>
+  <td><strong>000783.SZ</strong></td>
+  <td>长江证券</td>
+  <td>深市主板</td>
+  <td class="num">87.36</td>
+  <td class="num">90.86</td>
+  <td><span class="badge hold">强势候选；不追高，等回踩/缩量企稳再动手</span></td>
+  <td class="num">9.36</td>
+  <td class="num">30.56%</td>
+  <td class="num">34.15%</td>
+  <td class="num">12.32</td>
+  <td class="num">1.41</td>
+  <td class="num">19.57亿</td>
+  <td><span class="badge warn">短线加速,波动偏高</span></td>
+</tr>
+
+<tr>
+  <td class="num">6</td>
+  <td><strong>601066.SH</strong></td>
+  <td>中信建投</td>
+  <td>沪市主板</td>
+  <td class="num">87.27</td>
+  <td class="num">85.27</td>
+  <td><span class="badge buy">候选买入；等回踩MA20不破或放量突破后分批</span></td>
+  <td class="num">29.30</td>
+  <td class="num">17.43%</td>
+  <td class="num">34.53%</td>
+  <td class="num">20.18</td>
+  <td class="num">2.63</td>
+  <td class="num">20.21亿</td>
+  <td><span class="badge ok">无</span></td>
+</tr>
+
+<tr>
+  <td class="num">7</td>
+  <td><strong>000776.SZ</strong></td>
+  <td>广发证券</td>
+  <td>深市主板</td>
+  <td class="num">87.23</td>
+  <td class="num">85.23</td>
+  <td><span class="badge hold">强势候选；不追高，等回踩/缩量企稳再动手</span></td>
+  <td class="num">22.52</td>
+  <td class="num">18.15%</td>
+  <td class="num">19.34%</td>
+  <td class="num">11.26</td>
+  <td class="num">1.28</td>
+  <td class="num">21.89亿</td>
+  <td><span class="badge warn">量能不足</span></td>
+</tr>
+
+<tr>
+  <td class="num">8</td>
+  <td><strong>601336.SH</strong></td>
+  <td>新华保险</td>
+  <td>沪市主板</td>
+  <td class="num">87.01</td>
+  <td class="num">85.01</td>
+  <td><span class="badge buy">候选买入；等回踩MA20不破或放量突破后分批</span></td>
+  <td class="num">62.52</td>
+  <td class="num">7.74%</td>
+  <td class="num">0.35%</td>
+  <td class="num">5.29</td>
+  <td class="num">1.58</td>
+  <td class="num">18.79亿</td>
+  <td><span class="badge ok">无</span></td>
+</tr>
+
+<tr>
+  <td class="num">9</td>
+  <td><strong>002266.SZ</strong></td>
+  <td>浙富控股</td>
+  <td>深市主板</td>
+  <td class="num">86.80</td>
+  <td class="num">84.80</td>
+  <td><span class="badge buy">候选买入；等回踩MA20不破或放量突破后分批</span></td>
+  <td class="num">5.20</td>
+  <td class="num">12.80%</td>
+  <td class="num">23.95%</td>
+  <td class="num">18.73</td>
+  <td class="num">2.15</td>
+  <td class="num">9.20亿</td>
+  <td><span class="badge ok">无</span></td>
+</tr>
+
+<tr>
+  <td class="num">10</td>
+  <td><strong>600030.SH</strong></td>
+  <td>中信证券</td>
+  <td>沪市主板</td>
+  <td class="num">85.91</td>
+  <td class="num">83.91</td>
+  <td><span class="badge hold">强势候选；不追高，等回踩/缩量企稳再动手</span></td>
+  <td class="num">28.68</td>
+  <td class="num">11.77%</td>
+  <td class="num">12.54%</td>
+  <td class="num">12.62</td>
+  <td class="num">1.46</td>
+  <td class="num">53.75亿</td>
+  <td><span class="badge warn">量能不足</span></td>
+</tr>
+
+<tr>
+  <td class="num">11</td>
+  <td><strong>603259.SH</strong></td>
+  <td>药明康德</td>
+  <td>沪市主板</td>
+  <td class="num">84.94</td>
+  <td class="num">84.94</td>
+  <td><span class="badge buy">候选买入；等回踩MA20不破或放量突破后分批</span></td>
+  <td class="num">121.07</td>
+  <td class="num">24.76%</td>
+  <td class="num">15.68%</td>
+  <td class="num">17.95</td>
+  <td class="num">4.29</td>
+  <td class="num">69.40亿</td>
+  <td><span class="badge ok">无</span></td>
+</tr>
+
+<tr>
+  <td class="num">12</td>
+  <td><strong>000551.SZ</strong></td>
+  <td>创元科技</td>
+  <td>深市主板</td>
+  <td class="num">84.22</td>
+  <td class="num">84.22</td>
+  <td><span class="badge buy">候选买入；等回踩MA20不破或放量突破后分批</span></td>
+  <td class="num">18.44</td>
+  <td class="num">22.57%</td>
+  <td class="num">31.83%</td>
+  <td class="num">26.31</td>
+  <td class="num">2.94</td>
+  <td class="num">5.41亿</td>
+  <td><span class="badge ok">无</span></td>
+</tr>
+
+<tr>
+  <td class="num">13</td>
+  <td><strong>601881.SH</strong></td>
+  <td>中国银河</td>
+  <td>沪市主板</td>
+  <td class="num">84.06</td>
+  <td class="num">82.06</td>
+  <td><span class="badge hold">强势候选；不追高，等回踩/缩量企稳再动手</span></td>
+  <td class="num">13.19</td>
+  <td class="num">9.28%</td>
+  <td class="num">1.38%</td>
+  <td class="num">11.25</td>
+  <td class="num">1.19</td>
+  <td class="num">6.98亿</td>
+  <td><span class="badge warn">量能不足</span></td>
+</tr>
+
+<tr>
+  <td class="num">14</td>
+  <td><strong>002415.SZ</strong></td>
+  <td>海康威视</td>
+  <td>深市主板</td>
+  <td class="num">83.63</td>
+  <td class="num">83.63</td>
+  <td><span class="badge buy">候选买入；等回踩MA20不破或放量突破后分批</span></td>
+  <td class="num">35.39</td>
+  <td class="num">16.49%</td>
+  <td class="num">14.17%</td>
+  <td class="num">21.71</td>
+  <td class="num">3.77</td>
+  <td class="num">38.05亿</td>
+  <td><span class="badge ok">无</span></td>
+</tr>
+
+<tr>
+  <td class="num">15</td>
+  <td><strong>601198.SH</strong></td>
+  <td>东兴证券</td>
+  <td>沪市主板</td>
+  <td class="num">82.41</td>
+  <td class="num">82.41</td>
+  <td><span class="badge hold">强势候选；不追高，等回踩/缩量企稳再动手</span></td>
+  <td class="num">14.02</td>
+  <td class="num">10.39%</td>
+  <td class="num">9.45%</td>
+  <td class="num">21.84</td>
+  <td class="num">1.47</td>
+  <td class="num">3.82亿</td>
+  <td><span class="badge warn">短线加速</span></td>
+</tr>
+
+<tr>
+  <td class="num">16</td>
+  <td><strong>002768.SZ</strong></td>
+  <td>国恩股份</td>
+  <td>深市主板</td>
+  <td class="num">82.17</td>
+  <td class="num">85.67</td>
+  <td><span class="badge hold">强势候选；不追高，等回踩/缩量企稳再动手</span></td>
+  <td class="num">59.55</td>
+  <td class="num">34.54%</td>
+  <td class="num">82.36%</td>
+  <td class="num">26.72</td>
+  <td class="num">3.82</td>
+  <td class="num">10.75亿</td>
+  <td><span class="badge warn">短线加速</span></td>
+</tr>
+
+<tr>
+  <td class="num">17</td>
+  <td><strong>603339.SH</strong></td>
+  <td>四方科技</td>
+  <td>沪市主板</td>
+  <td class="num">81.70</td>
+  <td class="num">81.70</td>
+  <td><span class="badge buy">候选买入；等回踩MA20不破或放量突破后分批</span></td>
+  <td class="num">15.33</td>
+  <td class="num">18.84%</td>
+  <td class="num">17.83%</td>
+  <td class="num">32.09</td>
+  <td class="num">1.76</td>
+  <td class="num">5.36亿</td>
+  <td><span class="badge ok">无</span></td>
+</tr>
+
+<tr>
+  <td class="num">18</td>
+  <td><strong>603661.SH</strong></td>
+  <td>恒林股份</td>
+  <td>沪市主板</td>
+  <td class="num">81.58</td>
+  <td class="num">79.58</td>
+  <td><span class="badge hold">强势候选；不追高，等回踩/缩量企稳再动手</span></td>
+  <td class="num">40.30</td>
+  <td class="num">9.66%</td>
+  <td class="num">28.51%</td>
+  <td class="num">32.78</td>
+  <td class="num">1.52</td>
+  <td class="num">4.18亿</td>
+  <td><span class="badge warn">波动偏高</span></td>
+</tr>
+
+<tr>
+  <td class="num">19</td>
+  <td><strong>002457.SZ</strong></td>
+  <td>青龙管业</td>
+  <td>深市主板</td>
+  <td class="num">81.49</td>
+  <td class="num">81.49</td>
+  <td><span class="badge hold">强势候选；不追高，等回踩/缩量企稳再动手</span></td>
+  <td class="num">15.06</td>
+  <td class="num">21.65%</td>
+  <td class="num">37.78%</td>
+  <td class="num">39.04</td>
+  <td class="num">1.98</td>
+  <td class="num">9.47亿</td>
+  <td><span class="badge warn">短线加速</span></td>
+</tr>
+
+<tr>
+  <td class="num">20</td>
+  <td><strong>603223.SH</strong></td>
+  <td>恒通股份</td>
+  <td>沪市主板</td>
+  <td class="num">81.30</td>
+  <td class="num">87.30</td>
+  <td><span class="badge hold">强势候选；不追高，等回踩/缩量企稳再动手</span></td>
+  <td class="num">12.47</td>
+  <td class="num">37.64%</td>
+  <td class="num">50.13%</td>
+  <td class="num">27.78</td>
+  <td class="num">2.15</td>
+  <td class="num">3.60亿</td>
+  <td><span class="badge warn">短线加速</span></td>
+</tr>
+</tbody>
+  </table>
+</div>
+
+  </section>
+
+  <section>
+    <h2>全市场前 20 操作建议</h2>
+    <div class="detail-grid">
+<article class="detail">
+  <h3>1. TCL科技 <span class="footer-note">000100.SZ / 深市主板</span></h3>
+  <p>排序/羊哥分：<strong>89.59 / 87.59</strong>；动作：<strong>buy_candidate</strong>。</p>
+  <p>量价：收盘 <strong>5.36</strong>，MA20 <strong>5.18</strong>，MA60 <strong>4.61</strong>，成交额 <strong>72.19 亿</strong>，成交额/20日均额 <strong>0.87</strong>。</p>
+  <p>建议：<strong>强势候选；不追高，等回踩/缩量企稳再动手</strong>；参考低吸/加仓区间 <strong>5.12-5.33</strong>；纪律线参考 <strong>4.98</strong>。</p>
+  <p>风险：<span class="badge warn">波动偏高</span>；策略标签 trend_volume_confirmation,market_liquidity_context；策略风险 none。</p>
+</article>
+
+
+<article class="detail">
+  <h3>2. 招商证券 <span class="footer-note">600999.SH / 沪市主板</span></h3>
+  <p>排序/羊哥分：<strong>88.86 / 92.36</strong>；动作：<strong>buy_candidate</strong>。</p>
+  <p>量价：收盘 <strong>21.75</strong>，MA20 <strong>20.21</strong>，MA60 <strong>17.67</strong>，成交额 <strong>38.66 亿</strong>，成交额/20日均额 <strong>1.22</strong>。</p>
+  <p>建议：<strong>候选买入；等回踩MA20不破或放量突破后分批</strong>；参考低吸/加仓区间 <strong>20.01-20.82</strong>；纪律线参考 <strong>20.21</strong>。</p>
+  <p>风险：<span class="badge ok">无</span>；策略标签 quality_value_margin,trend_volume_confirmation,market_liquidity_context；策略风险 none。</p>
+</article>
+
+
+<article class="detail">
+  <h3>3. 国泰海通 <span class="footer-note">601211.SH / 沪市主板</span></h3>
+  <p>排序/羊哥分：<strong>87.95 / 85.95</strong>；动作：<strong>buy_candidate</strong>。</p>
+  <p>量价：收盘 <strong>18.87</strong>，MA20 <strong>18.07</strong>，MA60 <strong>16.57</strong>，成交额 <strong>23.97 亿</strong>，成交额/20日均额 <strong>0.73</strong>。</p>
+  <p>建议：<strong>强势候选；不追高，等回踩/缩量企稳再动手</strong>；参考低吸/加仓区间 <strong>17.89-18.61</strong>；纪律线参考 <strong>17.55</strong>。</p>
+  <p>风险：<span class="badge warn">量能不足</span>；策略标签 quality_value_margin,market_liquidity_context；策略风险 volume_price_not_confirmed。</p>
+</article>
+
+
+<article class="detail">
+  <h3>4. 中金公司 <span class="footer-note">601995.SH / 沪市主板</span></h3>
+  <p>排序/羊哥分：<strong>87.41 / 87.41</strong>；动作：<strong>buy_candidate</strong>。</p>
+  <p>量价：收盘 <strong>37.05</strong>，MA20 <strong>35.33</strong>，MA60 <strong>34.37</strong>，成交额 <strong>15.67 亿</strong>，成交额/20日均额 <strong>1.21</strong>。</p>
+  <p>建议：<strong>候选买入；等回踩MA20不破或放量突破后分批</strong>；参考低吸/加仓区间 <strong>34.98-36.39</strong>；纪律线参考 <strong>34.46</strong>。</p>
+  <p>风险：<span class="badge ok">无</span>；策略标签 quality_value_margin,trend_volume_confirmation,market_liquidity_context；策略风险 none。</p>
+</article>
+
+
+<article class="detail">
+  <h3>5. 长江证券 <span class="footer-note">000783.SZ / 深市主板</span></h3>
+  <p>排序/羊哥分：<strong>87.36 / 90.86</strong>；动作：<strong>buy_candidate</strong>。</p>
+  <p>量价：收盘 <strong>9.36</strong>，MA20 <strong>9.01</strong>，MA60 <strong>8.05</strong>，成交额 <strong>19.57 亿</strong>，成交额/20日均额 <strong>0.81</strong>。</p>
+  <p>建议：<strong>强势候选；不追高，等回踩/缩量企稳再动手</strong>；参考低吸/加仓区间 <strong>8.92-9.28</strong>；纪律线参考 <strong>8.70</strong>。</p>
+  <p>风险：<span class="badge warn">短线加速,波动偏高</span>；策略标签 trend_volume_confirmation,market_liquidity_context；策略风险 none。</p>
+</article>
+
+
+<article class="detail">
+  <h3>6. 中信建投 <span class="footer-note">601066.SH / 沪市主板</span></h3>
+  <p>排序/羊哥分：<strong>87.27 / 85.27</strong>；动作：<strong>buy_candidate</strong>。</p>
+  <p>量价：收盘 <strong>29.30</strong>，MA20 <strong>27.76</strong>，MA60 <strong>24.55</strong>，成交额 <strong>20.21 亿</strong>，成交额/20日均额 <strong>0.91</strong>。</p>
+  <p>建议：<strong>候选买入；等回踩MA20不破或放量突破后分批</strong>；参考低吸/加仓区间 <strong>27.48-28.59</strong>；纪律线参考 <strong>27.25</strong>。</p>
+  <p>风险：<span class="badge ok">无</span>；策略标签 trend_volume_confirmation,market_liquidity_context；策略风险 none。</p>
+</article>
+
+
+<article class="detail">
+  <h3>7. 广发证券 <span class="footer-note">000776.SZ / 深市主板</span></h3>
+  <p>排序/羊哥分：<strong>87.23 / 85.23</strong>；动作：<strong>buy_candidate</strong>。</p>
+  <p>量价：收盘 <strong>22.52</strong>，MA20 <strong>22.40</strong>，MA60 <strong>20.67</strong>，成交额 <strong>21.89 亿</strong>，成交额/20日均额 <strong>0.72</strong>。</p>
+  <p>建议：<strong>强势候选；不追高，等回踩/缩量企稳再动手</strong>；参考低吸/加仓区间 <strong>22.17-23.07</strong>；纪律线参考 <strong>20.94</strong>。</p>
+  <p>风险：<span class="badge warn">量能不足</span>；策略标签 market_liquidity_context；策略风险 volume_price_not_confirmed。</p>
+</article>
+
+
+<article class="detail">
+  <h3>8. 新华保险 <span class="footer-note">601336.SH / 沪市主板</span></h3>
+  <p>排序/羊哥分：<strong>87.01 / 85.01</strong>；动作：<strong>buy_candidate</strong>。</p>
+  <p>量价：收盘 <strong>62.52</strong>，MA20 <strong>62.08</strong>，MA60 <strong>61.48</strong>，成交额 <strong>18.79 亿</strong>，成交额/20日均额 <strong>0.80</strong>。</p>
+  <p>建议：<strong>候选买入；等回踩MA20不破或放量突破后分批</strong>；参考低吸/加仓区间 <strong>61.46-63.94</strong>；纪律线参考 <strong>58.14</strong>。</p>
+  <p>风险：<span class="badge ok">无</span>；策略标签 trend_volume_confirmation,market_liquidity_context；策略风险 none。</p>
+</article>
+
+
+<article class="detail">
+  <h3>9. 浙富控股 <span class="footer-note">002266.SZ / 深市主板</span></h3>
+  <p>排序/羊哥分：<strong>86.80 / 84.80</strong>；动作：<strong>buy_candidate</strong>。</p>
+  <p>量价：收盘 <strong>5.20</strong>，MA20 <strong>5.07</strong>，MA60 <strong>5.01</strong>，成交额 <strong>9.20 亿</strong>，成交额/20日均额 <strong>1.34</strong>。</p>
+  <p>建议：<strong>候选买入；等回踩MA20不破或放量突破后分批</strong>；参考低吸/加仓区间 <strong>5.02-5.22</strong>；纪律线参考 <strong>4.84</strong>。</p>
+  <p>风险：<span class="badge ok">无</span>；策略标签 trend_volume_confirmation,market_liquidity_context；策略风险 none。</p>
+</article>
+
+
+<article class="detail">
+  <h3>10. 中信证券 <span class="footer-note">600030.SH / 沪市主板</span></h3>
+  <p>排序/羊哥分：<strong>85.91 / 83.91</strong>；动作：<strong>buy_candidate</strong>。</p>
+  <p>量价：收盘 <strong>28.68</strong>，MA20 <strong>28.00</strong>，MA60 <strong>26.60</strong>，成交额 <strong>53.75 亿</strong>，成交额/20日均额 <strong>0.72</strong>。</p>
+  <p>建议：<strong>强势候选；不追高，等回踩/缩量企稳再动手</strong>；参考低吸/加仓区间 <strong>27.72-28.84</strong>；纪律线参考 <strong>26.67</strong>。</p>
+  <p>风险：<span class="badge warn">量能不足</span>；策略标签 quality_value_margin,market_liquidity_context；策略风险 volume_price_not_confirmed。</p>
+</article>
+
+
+<article class="detail">
+  <h3>11. 药明康德 <span class="footer-note">603259.SH / 沪市主板</span></h3>
+  <p>排序/羊哥分：<strong>84.94 / 84.94</strong>；动作：<strong>buy_candidate</strong>。</p>
+  <p>量价：收盘 <strong>121.07</strong>，MA20 <strong>112.91</strong>，MA60 <strong>105.46</strong>，成交额 <strong>69.40 亿</strong>，成交额/20日均额 <strong>0.91</strong>。</p>
+  <p>建议：<strong>候选买入；等回踩MA20不破或放量突破后分批</strong>；参考低吸/加仓区间 <strong>111.78-116.30</strong>；纪律线参考 <strong>112.60</strong>。</p>
+  <p>风险：<span class="badge ok">无</span>；策略标签 trend_volume_confirmation,market_liquidity_context；策略风险 none。</p>
+</article>
+
+
+<article class="detail">
+  <h3>12. 创元科技 <span class="footer-note">000551.SZ / 深市主板</span></h3>
+  <p>排序/羊哥分：<strong>84.22 / 84.22</strong>；动作：<strong>buy_candidate</strong>。</p>
+  <p>量价：收盘 <strong>18.44</strong>，MA20 <strong>17.63</strong>，MA60 <strong>16.36</strong>，成交额 <strong>5.41 亿</strong>，成交额/20日均额 <strong>0.77</strong>。</p>
+  <p>建议：<strong>候选买入；等回踩MA20不破或放量突破后分批</strong>；参考低吸/加仓区间 <strong>17.45-18.16</strong>；纪律线参考 <strong>17.15</strong>。</p>
+  <p>风险：<span class="badge ok">无</span>；策略标签 trend_volume_confirmation,market_liquidity_context；策略风险 none。</p>
+</article>
+
+
+<article class="detail">
+  <h3>13. 中国银河 <span class="footer-note">601881.SH / 沪市主板</span></h3>
+  <p>排序/羊哥分：<strong>84.06 / 82.06</strong>；动作：<strong>buy_candidate</strong>。</p>
+  <p>量价：收盘 <strong>13.19</strong>，MA20 <strong>12.81</strong>，MA60 <strong>12.64</strong>，成交额 <strong>6.98 亿</strong>，成交额/20日均额 <strong>0.74</strong>。</p>
+  <p>建议：<strong>强势候选；不追高，等回踩/缩量企稳再动手</strong>；参考低吸/加仓区间 <strong>12.69-13.20</strong>；纪律线参考 <strong>12.27</strong>。</p>
+  <p>风险：<span class="badge warn">量能不足</span>；策略标签 market_liquidity_context；策略风险 volume_price_not_confirmed。</p>
+</article>
+
+
+<article class="detail">
+  <h3>14. 海康威视 <span class="footer-note">002415.SZ / 深市主板</span></h3>
+  <p>排序/羊哥分：<strong>83.63 / 83.63</strong>；动作：<strong>buy_candidate</strong>。</p>
+  <p>量价：收盘 <strong>35.39</strong>，MA20 <strong>33.00</strong>，MA60 <strong>32.65</strong>，成交额 <strong>38.05 亿</strong>，成交额/20日均额 <strong>1.17</strong>。</p>
+  <p>建议：<strong>候选买入；等回踩MA20不破或放量突破后分批</strong>；参考低吸/加仓区间 <strong>32.67-33.99</strong>；纪律线参考 <strong>32.91</strong>。</p>
+  <p>风险：<span class="badge ok">无</span>；策略标签 trend_volume_confirmation,market_liquidity_context；策略风险 none。</p>
+</article>
+
+
+<article class="detail">
+  <h3>15. 东兴证券 <span class="footer-note">601198.SH / 沪市主板</span></h3>
+  <p>排序/羊哥分：<strong>82.41 / 82.41</strong>；动作：<strong>buy_candidate</strong>。</p>
+  <p>量价：收盘 <strong>14.02</strong>，MA20 <strong>13.38</strong>，MA60 <strong>13.17</strong>，成交额 <strong>3.82 亿</strong>，成交额/20日均额 <strong>1.01</strong>。</p>
+  <p>建议：<strong>强势候选；不追高，等回踩/缩量企稳再动手</strong>；参考低吸/加仓区间 <strong>13.25-13.78</strong>；纪律线参考 <strong>13.04</strong>。</p>
+  <p>风险：<span class="badge warn">短线加速</span>；策略标签 trend_volume_confirmation,market_liquidity_context；策略风险 none。</p>
+</article>
+
+
+<article class="detail">
+  <h3>16. 国恩股份 <span class="footer-note">002768.SZ / 深市主板</span></h3>
+  <p>排序/羊哥分：<strong>82.17 / 85.67</strong>；动作：<strong>buy_candidate</strong>。</p>
+  <p>量价：收盘 <strong>59.55</strong>，MA20 <strong>53.29</strong>，MA60 <strong>44.24</strong>，成交额 <strong>10.75 亿</strong>，成交额/20日均额 <strong>1.39</strong>。</p>
+  <p>建议：<strong>强势候选；不追高，等回踩/缩量企稳再动手</strong>；参考低吸/加仓区间 <strong>52.76-54.89</strong>；纪律线参考 <strong>53.29</strong>。</p>
+  <p>风险：<span class="badge warn">短线加速</span>；策略标签 trend_volume_confirmation,market_liquidity_context；策略风险 none。</p>
+</article>
+
+
+<article class="detail">
+  <h3>17. 四方科技 <span class="footer-note">603339.SH / 沪市主板</span></h3>
+  <p>排序/羊哥分：<strong>81.70 / 81.70</strong>；动作：<strong>buy_candidate</strong>。</p>
+  <p>量价：收盘 <strong>15.33</strong>，MA20 <strong>14.06</strong>，MA60 <strong>13.65</strong>，成交额 <strong>5.36 亿</strong>，成交额/20日均额 <strong>2.52</strong>。</p>
+  <p>建议：<strong>候选买入；等回踩MA20不破或放量突破后分批</strong>；参考低吸/加仓区间 <strong>13.92-14.49</strong>；纪律线参考 <strong>14.06</strong>。</p>
+  <p>风险：<span class="badge ok">无</span>；策略标签 trend_volume_confirmation,market_liquidity_context；策略风险 none。</p>
+</article>
+
+
+<article class="detail">
+  <h3>18. 恒林股份 <span class="footer-note">603661.SH / 沪市主板</span></h3>
+  <p>排序/羊哥分：<strong>81.58 / 79.58</strong>；动作：<strong>buy_candidate</strong>。</p>
+  <p>量价：收盘 <strong>40.30</strong>，MA20 <strong>37.37</strong>，MA60 <strong>33.46</strong>，成交额 <strong>4.18 亿</strong>，成交额/20日均额 <strong>1.47</strong>。</p>
+  <p>建议：<strong>强势候选；不追高，等回踩/缩量企稳再动手</strong>；参考低吸/加仓区间 <strong>36.99-38.49</strong>；纪律线参考 <strong>37.37</strong>。</p>
+  <p>风险：<span class="badge warn">波动偏高</span>；策略标签 trend_volume_confirmation,market_liquidity_context；策略风险 none。</p>
+</article>
+
+
+<article class="detail">
+  <h3>19. 青龙管业 <span class="footer-note">002457.SZ / 深市主板</span></h3>
+  <p>排序/羊哥分：<strong>81.49 / 81.49</strong>；动作：<strong>buy_candidate</strong>。</p>
+  <p>量价：收盘 <strong>15.06</strong>，MA20 <strong>13.24</strong>，MA60 <strong>12.26</strong>，成交额 <strong>9.47 亿</strong>，成交额/20日均额 <strong>1.74</strong>。</p>
+  <p>建议：<strong>强势候选；不追高，等回踩/缩量企稳再动手</strong>；参考低吸/加仓区间 <strong>13.11-13.64</strong>；纪律线参考 <strong>13.24</strong>。</p>
+  <p>风险：<span class="badge warn">短线加速</span>；策略标签 trend_volume_confirmation,market_liquidity_context；策略风险 none。</p>
+</article>
+
+
+<article class="detail">
+  <h3>20. 恒通股份 <span class="footer-note">603223.SH / 沪市主板</span></h3>
+  <p>排序/羊哥分：<strong>81.30 / 87.30</strong>；动作：<strong>buy_candidate</strong>。</p>
+  <p>量价：收盘 <strong>12.47</strong>，MA20 <strong>11.62</strong>，MA60 <strong>10.11</strong>，成交额 <strong>3.60 亿</strong>，成交额/20日均额 <strong>1.14</strong>。</p>
+  <p>建议：<strong>强势候选；不追高，等回踩/缩量企稳再动手</strong>；参考低吸/加仓区间 <strong>11.50-11.97</strong>；纪律线参考 <strong>11.60</strong>。</p>
+  <p>风险：<span class="badge warn">短线加速</span>；策略标签 trend_volume_confirmation,market_liquidity_context；策略风险 none。</p>
+</article>
+</div>
+  </section>
+
+  <section class="panel">
+    <div class="panel-body">
+      <h2>创业板前 10</h2>
+      <p class="footer-note">按创业板内综合评分展示前 10，不限候选池；操作列会标明候选、观察或不追高。</p>
+    </div>
+    
+<div class="table-wrap">
+  <table>
+    <thead>
+      <tr>
+        <th class="num">排名</th><th>代码</th><th>名称</th><th>板块</th><th class="num">综合分</th><th class="num">羊哥分</th><th>操作</th><th class="num">收盘</th><th class="num">20日涨幅</th><th class="num">60日涨幅</th><th class="num">PE</th><th class="num">PB</th><th class="num">成交额</th><th>风险提示</th>
+      </tr>
+    </thead>
+    <tbody>
+<tr>
+  <td class="num">1</td>
+  <td><strong>300041.SZ</strong></td>
+  <td>回天新材</td>
+  <td>创业板</td>
+  <td class="num">75.94</td>
+  <td class="num">79.14</td>
+  <td><span class="badge hold">强势候选；不追高，等回踩/缩量企稳再动手</span></td>
+  <td class="num">16.88</td>
+  <td class="num">24.38%</td>
+  <td class="num">57.16%</td>
+  <td class="num">42.37</td>
+  <td class="num">3.12</td>
+  <td class="num">18.57亿</td>
+  <td><span class="badge warn">短线加速,单日涨幅偏大,双创高波动</span></td>
+</tr>
+
+<tr>
+  <td class="num">2</td>
+  <td><strong>300019.SZ</strong></td>
+  <td>硅宝科技</td>
+  <td>创业板</td>
+  <td class="num">75.14</td>
+  <td class="num">77.84</td>
+  <td><span class="badge hold">强势候选；不追高，等回踩/缩量企稳再动手</span></td>
+  <td class="num">21.45</td>
+  <td class="num">26.55%</td>
+  <td class="num">10.93%</td>
+  <td class="num">33.25</td>
+  <td class="num">3.06</td>
+  <td class="num">10.58亿</td>
+  <td><span class="badge warn">短线加速</span></td>
+</tr>
+
+<tr>
+  <td class="num">3</td>
+  <td><strong>301127.SZ</strong></td>
+  <td>武汉天源</td>
+  <td>创业板</td>
+  <td class="num">70.35</td>
+  <td class="num">77.55</td>
+  <td><span class="badge hold">强势候选；不追高，等回踩/缩量企稳再动手</span></td>
+  <td class="num">18.35</td>
+  <td class="num">42.47%</td>
+  <td class="num">12.37%</td>
+  <td class="num">57.77</td>
+  <td class="num">3.65</td>
+  <td class="num">5.43亿</td>
+  <td><span class="badge warn">短线加速,波动偏高,双创高波动</span></td>
+</tr>
+
+<tr>
+  <td class="num">4</td>
+  <td><strong>300592.SZ</strong></td>
+  <td>华凯易佰</td>
+  <td>创业板</td>
+  <td class="num">70.29</td>
+  <td class="num">79.99</td>
+  <td><span class="badge hold">强势候选；不追高，等回踩/缩量企稳再动手</span></td>
+  <td class="num">18.49</td>
+  <td class="num">50.82%</td>
+  <td class="num">44.91%</td>
+  <td class="num">31.00</td>
+  <td class="num">3.02</td>
+  <td class="num">4.19亿</td>
+  <td><span class="badge warn">短线加速,波动偏高,双创高波动</span></td>
+</tr>
+
+<tr>
+  <td class="num">5</td>
+  <td><strong>300873.SZ</strong></td>
+  <td>海晨股份</td>
+  <td>创业板</td>
+  <td class="num">67.99</td>
+  <td class="num">77.69</td>
+  <td><span class="badge hold">强势候选；不追高，等回踩/缩量企稳再动手</span></td>
+  <td class="num">29.78</td>
+  <td class="num">84.81%</td>
+  <td class="num">86.04%</td>
+  <td class="num">46.10</td>
+  <td class="num">2.98</td>
+  <td class="num">6.22亿</td>
+  <td><span class="badge warn">短线加速,波动偏高,双创高波动</span></td>
+</tr>
+
+<tr>
+  <td class="num">6</td>
+  <td><strong>300059.SZ</strong></td>
+  <td>东方财富</td>
+  <td>创业板</td>
+  <td class="num">66.69</td>
+  <td class="num">77.89</td>
+  <td><span class="badge hold">强势候选；不追高，等回踩/缩量企稳再动手</span></td>
+  <td class="num">20.59</td>
+  <td class="num">15.80%</td>
+  <td class="num">4.72%</td>
+  <td class="num">24.85</td>
+  <td class="num">3.41</td>
+  <td class="num">70.08亿</td>
+  <td><span class="badge warn">量能不足,双创高波动</span></td>
+</tr>
+
+<tr>
+  <td class="num">7</td>
+  <td><strong>300745.SZ</strong></td>
+  <td>欣锐科技</td>
+  <td>创业板</td>
+  <td class="num">63.29</td>
+  <td class="num">76.49</td>
+  <td><span class="badge hold">强势候选；不追高，等回踩/缩量企稳再动手</span></td>
+  <td class="num">49.18</td>
+  <td class="num">17.15%</td>
+  <td class="num">90.92%</td>
+  <td class="num">-102.81</td>
+  <td class="num">3.74</td>
+  <td class="num">7.24亿</td>
+  <td><span class="badge warn">波动偏高,双创高波动</span></td>
+</tr>
+
+<tr>
+  <td class="num">8</td>
+  <td><strong>301151.SZ</strong></td>
+  <td>冠龙节能</td>
+  <td>创业板</td>
+  <td class="num">61.92</td>
+  <td class="num">73.92</td>
+  <td><span class="badge buy">观察；等待量价或估值确认</span></td>
+  <td class="num">21.41</td>
+  <td class="num">10.59%</td>
+  <td class="num">16.18%</td>
+  <td class="num">78.81</td>
+  <td class="num">1.75</td>
+  <td class="num">2.52亿</td>
+  <td><span class="badge warn">双创高波动</span></td>
+</tr>
+
+<tr>
+  <td class="num">9</td>
+  <td><strong>301281.SZ</strong></td>
+  <td>科源制药</td>
+  <td>创业板</td>
+  <td class="num">61.85</td>
+  <td class="num">73.85</td>
+  <td><span class="badge buy">观察；等待量价或估值确认</span></td>
+  <td class="num">50.99</td>
+  <td class="num">13.37%</td>
+  <td class="num">46.71%</td>
+  <td class="num">234.55</td>
+  <td class="num">3.97</td>
+  <td class="num">2.05亿</td>
+  <td><span class="badge warn">波动偏高,双创高波动</span></td>
+</tr>
+
+<tr>
+  <td class="num">10</td>
+  <td><strong>301280.SZ</strong></td>
+  <td>珠城科技</td>
+  <td>创业板</td>
+  <td class="num">60.99</td>
+  <td class="num">74.99</td>
+  <td><span class="badge buy">观察；等待量价或估值确认</span></td>
+  <td class="num">49.65</td>
+  <td class="num">23.51%</td>
+  <td class="num">23.44%</td>
+  <td class="num">44.96</td>
+  <td class="num">4.81</td>
+  <td class="num">1.93亿</td>
+  <td><span class="badge warn">波动偏高,双创高波动</span></td>
+</tr>
+</tbody>
+  </table>
+</div>
+
+  </section>
+
+  <section class="panel">
+    <div class="panel-body">
+      <h2>科创板前 10</h2>
+      <p class="footer-note">按科创板内综合评分展示前 10，不限候选池；科创板估值弹性和波动更大，优先等待回踩确认。</p>
+    </div>
+    
+<div class="table-wrap">
+  <table>
+    <thead>
+      <tr>
+        <th class="num">排名</th><th>代码</th><th>名称</th><th>板块</th><th class="num">综合分</th><th class="num">羊哥分</th><th>操作</th><th class="num">收盘</th><th class="num">20日涨幅</th><th class="num">60日涨幅</th><th class="num">PE</th><th class="num">PB</th><th class="num">成交额</th><th>风险提示</th>
+      </tr>
+    </thead>
+    <tbody>
+<tr>
+  <td class="num">1</td>
+  <td><strong>688550.SH</strong></td>
+  <td>瑞联新材</td>
+  <td>科创板</td>
+  <td class="num">80.54</td>
+  <td class="num">79.74</td>
+  <td><span class="badge hold">强势候选；不追高，等回踩/缩量企稳再动手</span></td>
+  <td class="num">53.40</td>
+  <td class="num">18.19%</td>
+  <td class="num">34.90%</td>
+  <td class="num">30.60</td>
+  <td class="num">2.81</td>
+  <td class="num">4.84亿</td>
+  <td><span class="badge warn">单日涨幅偏大,波动偏高,双创高波动</span></td>
+</tr>
+
+<tr>
+  <td class="num">2</td>
+  <td><strong>688503.SH</strong></td>
+  <td>聚和材料</td>
+  <td>科创板</td>
+  <td class="num">73.23</td>
+  <td class="num">77.93</td>
+  <td><span class="badge hold">强势候选；不追高，等回踩/缩量企稳再动手</span></td>
+  <td class="num">111.61</td>
+  <td class="num">29.13%</td>
+  <td class="num">21.33%</td>
+  <td class="num">43.60</td>
+  <td class="num">5.09</td>
+  <td class="num">20.42亿</td>
+  <td><span class="badge warn">短线加速,波动偏高,双创高波动</span></td>
+</tr>
+
+<tr>
+  <td class="num">3</td>
+  <td><strong>688578.SH</strong></td>
+  <td>艾力斯</td>
+  <td>科创板</td>
+  <td class="num">71.92</td>
+  <td class="num">79.62</td>
+  <td><span class="badge hold">强势候选；不追高，等回踩/缩量企稳再动手</span></td>
+  <td class="num">121.64</td>
+  <td class="num">49.75%</td>
+  <td class="num">26.64%</td>
+  <td class="num">22.67</td>
+  <td class="num">7.07</td>
+  <td class="num">15.55亿</td>
+  <td><span class="badge warn">短线加速,波动偏高,双创高波动</span></td>
+</tr>
+
+<tr>
+  <td class="num">4</td>
+  <td><strong>688181.SH</strong></td>
+  <td>八亿时空</td>
+  <td>科创板</td>
+  <td class="num">69.47</td>
+  <td class="num">76.17</td>
+  <td><span class="badge hold">强势候选；不追高，等回踩/缩量企稳再动手</span></td>
+  <td class="num">55.79</td>
+  <td class="num">26.88%</td>
+  <td class="num">68.40%</td>
+  <td class="num">91.75</td>
+  <td class="num">3.59</td>
+  <td class="num">5.99亿</td>
+  <td><span class="badge warn">单日涨幅偏大,波动偏高,双创高波动</span></td>
+</tr>
+
+<tr>
+  <td class="num">5</td>
+  <td><strong>688332.SH</strong></td>
+  <td>中科蓝讯</td>
+  <td>科创板</td>
+  <td class="num">69.24</td>
+  <td class="num">76.44</td>
+  <td><span class="badge hold">强势候选；不追高，等回踩/缩量企稳再动手</span></td>
+  <td class="num">148.32</td>
+  <td class="num">61.13%</td>
+  <td class="num">78.33%</td>
+  <td class="num">19.40</td>
+  <td class="num">5.01</td>
+  <td class="num">6.60亿</td>
+  <td><span class="badge warn">短线加速,波动偏高,量能不足,双创高波动</span></td>
+</tr>
+
+<tr>
+  <td class="num">6</td>
+  <td><strong>688057.SH</strong></td>
+  <td>金达莱</td>
+  <td>科创板</td>
+  <td class="num">65.25</td>
+  <td class="num">78.95</td>
+  <td><span class="badge hold">强势候选；不追高，等回踩/缩量企稳再动手</span></td>
+  <td class="num">19.96</td>
+  <td class="num">46.01%</td>
+  <td class="num">61.10%</td>
+  <td class="num">94.16</td>
+  <td class="num">1.73</td>
+  <td class="num">4.22亿</td>
+  <td><span class="badge warn">短线加速,单日涨幅偏大,波动偏高,双创高波动</span></td>
+</tr>
+
+<tr>
+  <td class="num">7</td>
+  <td><strong>688035.SH</strong></td>
+  <td>德邦科技</td>
+  <td>科创板</td>
+  <td class="num">60.91</td>
+  <td class="num">72.11</td>
+  <td><span class="badge buy">观察；等待量价或估值确认</span></td>
+  <td class="num">98.11</td>
+  <td class="num">19.54%</td>
+  <td class="num">55.76%</td>
+  <td class="num">121.48</td>
+  <td class="num">5.91</td>
+  <td class="num">8.77亿</td>
+  <td><span class="badge warn">双创高波动</span></td>
+</tr>
+
+<tr>
+  <td class="num">8</td>
+  <td><strong>688279.SH</strong></td>
+  <td>峰岹科技</td>
+  <td>科创板</td>
+  <td class="num">60.91</td>
+  <td class="num">72.11</td>
+  <td><span class="badge buy">观察；等待量价或估值确认</span></td>
+  <td class="num">234.32</td>
+  <td class="num">14.98%</td>
+  <td class="num">37.96%</td>
+  <td class="num">105.04</td>
+  <td class="num">5.19</td>
+  <td class="num">4.78亿</td>
+  <td><span class="badge ok">无</span></td>
+</tr>
+
+<tr>
+  <td class="num">9</td>
+  <td><strong>688391.SH</strong></td>
+  <td>钜泉科技</td>
+  <td>科创板</td>
+  <td class="num">60.64</td>
+  <td class="num">72.64</td>
+  <td><span class="badge buy">观察；等待量价或估值确认</span></td>
+  <td class="num">34.99</td>
+  <td class="num">18.40%</td>
+  <td class="num">15.57%</td>
+  <td class="num">106.93</td>
+  <td class="num">2.17</td>
+  <td class="num">1.08亿</td>
+  <td><span class="badge ok">无</span></td>
+</tr>
+
+<tr>
+  <td class="num">10</td>
+  <td><strong>688230.SH</strong></td>
+  <td>芯导科技</td>
+  <td>科创板</td>
+  <td class="num">60.58</td>
+  <td class="num">74.58</td>
+  <td><span class="badge buy">观察；等待量价或估值确认</span></td>
+  <td class="num">75.18</td>
+  <td class="num">21.22%</td>
+  <td class="num">17.73%</td>
+  <td class="num">78.91</td>
+  <td class="num">3.93</td>
+  <td class="num">2.22亿</td>
+  <td><span class="badge ok">无</span></td>
+</tr>
+</tbody>
+  </table>
+</div>
+
+  </section>
+
+  <section class="panel">
+    <div class="panel-body rules">
+      <h2>执行纪律</h2>
+      <ul>
+        <li>不追连续急拉；若风险提示含“短线加速”，优先等回踩 MA20 附近且缩量企稳。</li>
+        <li>单只初始仓位建议不超过总资金 1%-2%；科创板/创业板建议再降一档。</li>
+        <li>若放量跌破 MA20 或单票亏损约 7%，先降风险暴露，再重新评估。</li>
+        <li>若指数环境转弱，候选池全部降一级处理。</li>
+      </ul>
+    </div>
+  </section>
+</main>
+</body>
+</html>
